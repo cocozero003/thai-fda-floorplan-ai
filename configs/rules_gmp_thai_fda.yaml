@@ -1,0 +1,97 @@
+rules:
+  - rule_id: GMP-001
+    name: Toilet near production area
+    description: Toilets located close to production areas may increase contamination risk and should be reviewed.
+    severity: high
+    condition:
+      type: minimum_distance
+      class_a: toilet
+      class_b: production_area
+      threshold: 80
+      operator: less_than
+    explanation_template: "Advisory finding: toilet area is approximately {distance:.1f} plan units from production area, below the review threshold of {threshold:.1f}."
+    recommended_action: Confirm physical separation, door orientation, ventilation, handwashing access, and sanitation controls before any regulatory decision.
+    advisory_only: true
+
+  - rule_id: GMP-002
+    name: Waste flow crossing product flow
+    description: Crossing between waste movement and product movement can indicate a possible contamination pathway.
+    severity: high
+    condition:
+      type: flow_intersection
+      flow_type_a: waste_flow
+      flow_type_b: product_flow
+    explanation_template: "Advisory finding: waste flow intersects product flow in the submitted floor-plan annotation."
+    recommended_action: Review routing, barriers, timing controls, and waste handling procedures with a human officer.
+    advisory_only: true
+
+  - rule_id: GMP-003
+    name: Raw material storage close to finished product storage
+    description: Raw materials stored close to finished products may create cross-contamination or mix-up risk.
+    severity: medium
+    condition:
+      type: minimum_distance
+      class_a: raw_material_storage
+      class_b: finished_product_storage
+      threshold: 130
+      operator: less_than
+    explanation_template: "Advisory finding: raw material storage is approximately {distance:.1f} plan units from finished product storage, below the review threshold of {threshold:.1f}."
+    recommended_action: Verify segregation, directional flow, labeling, and handling controls.
+    advisory_only: true
+
+  - rule_id: GMP-004
+    name: Missing handwashing point before production entry
+    description: Production entry routes should be reviewed for appropriate handwashing access.
+    severity: medium
+    condition:
+      type: sanitation_before_entry
+      production_class: production_area
+      handwashing_class: handwashing_point
+      max_distance_to_door: 90
+    explanation_template: "Advisory finding: no handwashing point was detected within {threshold:.1f} plan units of a production entry door."
+    recommended_action: Confirm whether a suitable handwashing point exists before entry into the production area.
+    advisory_only: true
+
+  - rule_id: GMP-005
+    name: Window opening directly to production area
+    description: Windows connected directly to production areas may require review for pest, dust, and contamination controls.
+    severity: review
+    condition:
+      type: adjacent_object
+      class_a: window
+      class_b: production_area
+      threshold: 35
+    explanation_template: "Advisory review flag: a window is approximately {distance:.1f} plan units from production area."
+    recommended_action: Review screening, sealing, airflow, and contamination prevention controls.
+    advisory_only: true
+
+  - rule_id: GMP-006
+    name: Waste area close to clean zone
+    description: Waste areas near clean production or packaging zones can indicate contamination risk.
+    severity: high
+    condition:
+      type: waste_area_near_clean_zone
+      waste_class: waste_area
+      clean_zone_classes:
+        - production_area
+        - packaging_area
+        - finished_product_storage
+      threshold: 120
+    explanation_template: "Advisory finding: waste area is approximately {distance:.1f} plan units from a clean zone, below the review threshold of {threshold:.1f}."
+    recommended_action: Review waste segregation, removal path, containment, cleaning frequency, and physical separation.
+    advisory_only: true
+
+  - rule_id: GMP-007
+    name: Unknown or unlabeled room near production
+    description: Unlabeled spaces near production areas create uncertainty and require officer interpretation.
+    severity: uncertain
+    condition:
+      type: unknown_room_near_production
+      unknown_classes:
+        - unknown
+        - unlabeled_room
+      production_class: production_area
+      threshold: 100
+    explanation_template: "Advisory uncertainty: an unknown or unlabeled room is approximately {distance:.1f} plan units from production area."
+    recommended_action: Ask the applicant to clarify the room function and review the layout manually.
+    advisory_only: true

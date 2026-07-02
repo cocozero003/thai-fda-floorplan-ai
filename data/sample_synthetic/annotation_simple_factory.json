@@ -1,0 +1,103 @@
+{
+  "annotation_id": "synthetic-simple-factory-001",
+  "version": "1.0",
+  "image_width": 800,
+  "image_height": 600,
+  "advisory_only": true,
+  "rooms": [
+    {
+      "room_id": "room-production",
+      "room_type": "production_area",
+      "polygon": {"points": [{"x": 260, "y": 170}, {"x": 520, "y": 170}, {"x": 520, "y": 390}, {"x": 260, "y": 390}]},
+      "metadata": {"synthetic_note": "central production area"}
+    },
+    {
+      "room_id": "room-raw-storage",
+      "room_type": "raw_material_storage",
+      "polygon": {"points": [{"x": 80, "y": 170}, {"x": 240, "y": 170}, {"x": 240, "y": 300}, {"x": 80, "y": 300}]},
+      "metadata": {}
+    },
+    {
+      "room_id": "room-finished-storage",
+      "room_type": "finished_product_storage",
+      "polygon": {"points": [{"x": 80, "y": 320}, {"x": 240, "y": 320}, {"x": 240, "y": 460}, {"x": 80, "y": 460}]},
+      "metadata": {}
+    },
+    {
+      "room_id": "room-packaging",
+      "room_type": "packaging_area",
+      "polygon": {"points": [{"x": 540, "y": 170}, {"x": 700, "y": 170}, {"x": 700, "y": 300}, {"x": 540, "y": 300}]},
+      "metadata": {}
+    },
+    {
+      "room_id": "room-washing",
+      "room_type": "washing_area",
+      "polygon": {"points": [{"x": 540, "y": 320}, {"x": 700, "y": 320}, {"x": 700, "y": 460}, {"x": 540, "y": 460}]},
+      "metadata": {}
+    },
+    {
+      "room_id": "room-toilet",
+      "room_type": "toilet",
+      "polygon": {"points": [{"x": 260, "y": 70}, {"x": 360, "y": 70}, {"x": 360, "y": 150}, {"x": 260, "y": 150}]},
+      "metadata": {"synthetic_risk": "intentionally close to production"}
+    },
+    {
+      "room_id": "room-waste",
+      "room_type": "waste_area",
+      "polygon": {"points": [{"x": 560, "y": 50}, {"x": 700, "y": 50}, {"x": 700, "y": 140}, {"x": 560, "y": 140}]},
+      "metadata": {}
+    },
+    {
+      "room_id": "room-corridor",
+      "room_type": "corridor",
+      "polygon": {"points": [{"x": 60, "y": 480}, {"x": 720, "y": 480}, {"x": 720, "y": 540}, {"x": 60, "y": 540}]},
+      "metadata": {}
+    },
+    {
+      "room_id": "room-unlabeled",
+      "room_type": "unknown",
+      "polygon": {"points": [{"x": 370, "y": 70}, {"x": 510, "y": 70}, {"x": 510, "y": 150}, {"x": 370, "y": 150}]},
+      "metadata": {"synthetic_note": "uncertain adjacent space"}
+    }
+  ],
+  "objects": [
+    {"object_id": "door-main", "object_type": "door", "bbox": {"x_min": 100, "y_min": 480, "x_max": 140, "y_max": 500}, "room_id": "room-corridor", "metadata": {}},
+    {"object_id": "door-production", "object_type": "door", "bbox": {"x_min": 370, "y_min": 390, "x_max": 420, "y_max": 410}, "room_id": "room-production", "metadata": {"entry": true}},
+    {"object_id": "window-production", "object_type": "window", "bbox": {"x_min": 500, "y_min": 230, "x_max": 530, "y_max": 270}, "room_id": "room-production", "metadata": {}},
+    {"object_id": "sink-washing", "object_type": "sink", "bbox": {"x_min": 585, "y_min": 350, "x_max": 625, "y_max": 380}, "room_id": "room-washing", "metadata": {}},
+    {"object_id": "handwash-corridor", "object_type": "handwashing_point", "bbox": {"x_min": 450, "y_min": 430, "x_max": 480, "y_max": 460}, "room_id": "room-corridor", "metadata": {}},
+    {"object_id": "drain-washing", "object_type": "drain", "bbox": {"x_min": 650, "y_min": 420, "x_max": 670, "y_max": 440}, "room_id": "room-washing", "metadata": {}},
+    {"object_id": "equipment-mixer", "object_type": "equipment", "bbox": {"x_min": 330, "y_min": 240, "x_max": 430, "y_max": 300}, "room_id": "room-production", "metadata": {"equipment_type": "synthetic mixer"}}
+  ],
+  "flows": [
+    {
+      "flow_id": "flow-raw-material",
+      "flow_type": "raw_material_flow",
+      "points": [{"x": 140, "y": 235}, {"x": 250, "y": 235}, {"x": 330, "y": 260}],
+      "related_object_ids": ["room-raw-storage", "room-production"]
+    },
+    {
+      "flow_id": "flow-product",
+      "flow_type": "product_flow",
+      "points": [{"x": 360, "y": 300}, {"x": 520, "y": 280}, {"x": 620, "y": 235}, {"x": 620, "y": 390}, {"x": 180, "y": 390}],
+      "related_object_ids": ["room-production", "room-packaging", "room-finished-storage"]
+    },
+    {
+      "flow_id": "flow-waste",
+      "flow_type": "waste_flow",
+      "points": [{"x": 640, "y": 95}, {"x": 620, "y": 235}, {"x": 470, "y": 345}, {"x": 620, "y": 430}],
+      "related_object_ids": ["room-waste", "room-washing"]
+    },
+    {
+      "flow_id": "flow-personnel",
+      "flow_type": "personnel_flow",
+      "points": [{"x": 120, "y": 510}, {"x": 395, "y": 510}, {"x": 395, "y": 400}, {"x": 395, "y": 270}],
+      "related_object_ids": ["door-main", "door-production", "room-production"]
+    }
+  ],
+  "metadata": {
+    "data_classification": "synthetic",
+    "contains_real_thai_fda_data": false,
+    "purpose": "Phase 1 prototype demonstration"
+  }
+}

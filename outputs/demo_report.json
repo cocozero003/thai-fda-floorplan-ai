@@ -1,0 +1,3399 @@
+{
+  "annotation_id": "synthetic-simple-factory-001",
+  "advisory_only": true,
+  "advisory_notice": "This report is advisory decision support only. It does not approve or reject any application. Human Thai FDA officers remain responsible for regulatory decisions.",
+  "human_review_required": true,
+  "summary": {
+    "finding_count": 6,
+    "severity_counts": {
+      "high": 3,
+      "medium": 1,
+      "review": 1,
+      "uncertain": 1
+    }
+  },
+  "findings": [
+    {
+      "rule_id": "GMP-001",
+      "name": "Toilet near production area",
+      "severity": "high",
+      "explanation": "Advisory finding: toilet area is approximately 20.0 plan units from production area, below the review threshold of 80.0.",
+      "recommended_action": "Confirm physical separation, door orientation, ventilation, handwashing access, and sanitation controls before any regulatory decision.",
+      "related_object_ids": [
+        "room-production",
+        "room-toilet"
+      ],
+      "confidence": 0.85,
+      "requires_officer_review": true,
+      "advisory_only": true
+    },
+    {
+      "rule_id": "GMP-002",
+      "name": "Waste flow crossing product flow",
+      "severity": "high",
+      "explanation": "Advisory finding: waste flow intersects product flow in the submitted floor-plan annotation.",
+      "recommended_action": "Review routing, barriers, timing controls, and waste handling procedures with a human officer.",
+      "related_object_ids": [
+        "flow-product",
+        "flow-waste",
+        "room-finished-storage",
+        "room-packaging",
+        "room-production",
+        "room-washing",
+        "room-waste"
+      ],
+      "confidence": 0.9,
+      "requires_officer_review": true,
+      "advisory_only": true
+    },
+    {
+      "rule_id": "GMP-003",
+      "name": "Raw material storage close to finished product storage",
+      "severity": "medium",
+      "explanation": "Advisory finding: raw material storage is approximately 20.0 plan units from finished product storage, below the review threshold of 130.0.",
+      "recommended_action": "Verify segregation, directional flow, labeling, and handling controls.",
+      "related_object_ids": [
+        "room-finished-storage",
+        "room-raw-storage"
+      ],
+      "confidence": 0.85,
+      "requires_officer_review": true,
+      "advisory_only": true
+    },
+    {
+      "rule_id": "GMP-005",
+      "name": "Window opening directly to production area",
+      "severity": "review",
+      "explanation": "Advisory review flag: a window is approximately 0.0 plan units from production area.",
+      "recommended_action": "Review screening, sealing, airflow, and contamination prevention controls.",
+      "related_object_ids": [
+        "room-production",
+        "window-production"
+      ],
+      "confidence": 0.65,
+      "requires_officer_review": true,
+      "advisory_only": true
+    },
+    {
+      "rule_id": "GMP-006",
+      "name": "Waste area close to clean zone",
+      "severity": "high",
+      "explanation": "Advisory finding: waste area is approximately 30.0 plan units from a clean zone, below the review threshold of 120.0.",
+      "recommended_action": "Review waste segregation, removal path, containment, cleaning frequency, and physical separation.",
+      "related_object_ids": [
+        "room-packaging",
+        "room-waste"
+      ],
+      "confidence": 0.85,
+      "requires_officer_review": true,
+      "advisory_only": true
+    },
+    {
+      "rule_id": "GMP-007",
+      "name": "Unknown or unlabeled room near production",
+      "severity": "uncertain",
+      "explanation": "Advisory uncertainty: an unknown or unlabeled room is approximately 20.0 plan units from production area.",
+      "recommended_action": "Ask the applicant to clarify the room function and review the layout manually.",
+      "related_object_ids": [
+        "room-production",
+        "room-unlabeled"
+      ],
+      "confidence": 0.55,
+      "requires_officer_review": true,
+      "advisory_only": true
+    }
+  ],
+  "features": {
+    "annotation_id": "synthetic-simple-factory-001",
+    "image_width": 800,
+    "image_height": 600,
+    "object_count_by_class": {
+      "door": 2,
+      "window": 1,
+      "sink": 1,
+      "handwashing_point": 1,
+      "drain": 1,
+      "equipment": 1,
+      "production_area": 1,
+      "raw_material_storage": 1,
+      "finished_product_storage": 1,
+      "packaging_area": 1,
+      "washing_area": 1,
+      "toilet": 1,
+      "waste_area": 1,
+      "corridor": 1,
+      "unknown": 1
+    },
+    "room_area_by_type": {
+      "production_area": 57200.0,
+      "raw_material_storage": 20800.0,
+      "finished_product_storage": 22400.0,
+      "packaging_area": 20800.0,
+      "washing_area": 22400.0,
+      "toilet": 8000.0,
+      "waste_area": 12600.0,
+      "corridor": 39600.0,
+      "unknown": 11200.0
+    },
+    "minimum_distances": {
+      "corridor__door": {
+        "class_a": "corridor",
+        "class_b": "door",
+        "object_id_a": "room-corridor",
+        "object_id_b": "door-main",
+        "distance": 0.0,
+        "center_a": {
+          "x": 390.0,
+          "y": 510.0
+        },
+        "center_b": {
+          "x": 120.0,
+          "y": 490.0
+        }
+      },
+      "door__corridor": {
+        "class_a": "door",
+        "class_b": "corridor",
+        "object_id_a": "door-main",
+        "object_id_b": "room-corridor",
+        "distance": 0.0,
+        "center_a": {
+          "x": 120.0,
+          "y": 490.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 510.0
+        }
+      },
+      "corridor__drain": {
+        "class_a": "corridor",
+        "class_b": "drain",
+        "object_id_a": "room-corridor",
+        "object_id_b": "drain-washing",
+        "distance": 40.0,
+        "center_a": {
+          "x": 390.0,
+          "y": 510.0
+        },
+        "center_b": {
+          "x": 660.0,
+          "y": 430.0
+        }
+      },
+      "drain__corridor": {
+        "class_a": "drain",
+        "class_b": "corridor",
+        "object_id_a": "drain-washing",
+        "object_id_b": "room-corridor",
+        "distance": 40.0,
+        "center_a": {
+          "x": 660.0,
+          "y": 430.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 510.0
+        }
+      },
+      "corridor__equipment": {
+        "class_a": "corridor",
+        "class_b": "equipment",
+        "object_id_a": "room-corridor",
+        "object_id_b": "equipment-mixer",
+        "distance": 180.0,
+        "center_a": {
+          "x": 390.0,
+          "y": 510.0
+        },
+        "center_b": {
+          "x": 380.0,
+          "y": 270.0
+        }
+      },
+      "equipment__corridor": {
+        "class_a": "equipment",
+        "class_b": "corridor",
+        "object_id_a": "equipment-mixer",
+        "object_id_b": "room-corridor",
+        "distance": 180.0,
+        "center_a": {
+          "x": 380.0,
+          "y": 270.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 510.0
+        }
+      },
+      "corridor__finished_product_storage": {
+        "class_a": "corridor",
+        "class_b": "finished_product_storage",
+        "object_id_a": "room-corridor",
+        "object_id_b": "room-finished-storage",
+        "distance": 20.0,
+        "center_a": {
+          "x": 390.0,
+          "y": 510.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 390.0
+        }
+      },
+      "finished_product_storage__corridor": {
+        "class_a": "finished_product_storage",
+        "class_b": "corridor",
+        "object_id_a": "room-finished-storage",
+        "object_id_b": "room-corridor",
+        "distance": 20.0,
+        "center_a": {
+          "x": 160.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 510.0
+        }
+      },
+      "corridor__handwashing_point": {
+        "class_a": "corridor",
+        "class_b": "handwashing_point",
+        "object_id_a": "room-corridor",
+        "object_id_b": "handwash-corridor",
+        "distance": 20.0,
+        "center_a": {
+          "x": 390.0,
+          "y": 510.0
+        },
+        "center_b": {
+          "x": 465.0,
+          "y": 445.0
+        }
+      },
+      "handwashing_point__corridor": {
+        "class_a": "handwashing_point",
+        "class_b": "corridor",
+        "object_id_a": "handwash-corridor",
+        "object_id_b": "room-corridor",
+        "distance": 20.0,
+        "center_a": {
+          "x": 465.0,
+          "y": 445.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 510.0
+        }
+      },
+      "corridor__packaging_area": {
+        "class_a": "corridor",
+        "class_b": "packaging_area",
+        "object_id_a": "room-corridor",
+        "object_id_b": "room-packaging",
+        "distance": 180.0,
+        "center_a": {
+          "x": 390.0,
+          "y": 510.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 235.0
+        }
+      },
+      "packaging_area__corridor": {
+        "class_a": "packaging_area",
+        "class_b": "corridor",
+        "object_id_a": "room-packaging",
+        "object_id_b": "room-corridor",
+        "distance": 180.0,
+        "center_a": {
+          "x": 620.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 510.0
+        }
+      },
+      "corridor__production_area": {
+        "class_a": "corridor",
+        "class_b": "production_area",
+        "object_id_a": "room-corridor",
+        "object_id_b": "room-production",
+        "distance": 90.0,
+        "center_a": {
+          "x": 390.0,
+          "y": 510.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 280.0
+        }
+      },
+      "production_area__corridor": {
+        "class_a": "production_area",
+        "class_b": "corridor",
+        "object_id_a": "room-production",
+        "object_id_b": "room-corridor",
+        "distance": 90.0,
+        "center_a": {
+          "x": 390.0,
+          "y": 280.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 510.0
+        }
+      },
+      "corridor__raw_material_storage": {
+        "class_a": "corridor",
+        "class_b": "raw_material_storage",
+        "object_id_a": "room-corridor",
+        "object_id_b": "room-raw-storage",
+        "distance": 180.0,
+        "center_a": {
+          "x": 390.0,
+          "y": 510.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 235.0
+        }
+      },
+      "raw_material_storage__corridor": {
+        "class_a": "raw_material_storage",
+        "class_b": "corridor",
+        "object_id_a": "room-raw-storage",
+        "object_id_b": "room-corridor",
+        "distance": 180.0,
+        "center_a": {
+          "x": 160.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 510.0
+        }
+      },
+      "corridor__sink": {
+        "class_a": "corridor",
+        "class_b": "sink",
+        "object_id_a": "room-corridor",
+        "object_id_b": "sink-washing",
+        "distance": 100.0,
+        "center_a": {
+          "x": 390.0,
+          "y": 510.0
+        },
+        "center_b": {
+          "x": 605.0,
+          "y": 365.0
+        }
+      },
+      "sink__corridor": {
+        "class_a": "sink",
+        "class_b": "corridor",
+        "object_id_a": "sink-washing",
+        "object_id_b": "room-corridor",
+        "distance": 100.0,
+        "center_a": {
+          "x": 605.0,
+          "y": 365.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 510.0
+        }
+      },
+      "corridor__toilet": {
+        "class_a": "corridor",
+        "class_b": "toilet",
+        "object_id_a": "room-corridor",
+        "object_id_b": "room-toilet",
+        "distance": 330.0,
+        "center_a": {
+          "x": 390.0,
+          "y": 510.0
+        },
+        "center_b": {
+          "x": 310.0,
+          "y": 110.0
+        }
+      },
+      "toilet__corridor": {
+        "class_a": "toilet",
+        "class_b": "corridor",
+        "object_id_a": "room-toilet",
+        "object_id_b": "room-corridor",
+        "distance": 330.0,
+        "center_a": {
+          "x": 310.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 510.0
+        }
+      },
+      "corridor__unknown": {
+        "class_a": "corridor",
+        "class_b": "unknown",
+        "object_id_a": "room-corridor",
+        "object_id_b": "room-unlabeled",
+        "distance": 330.0,
+        "center_a": {
+          "x": 390.0,
+          "y": 510.0
+        },
+        "center_b": {
+          "x": 440.0,
+          "y": 110.0
+        }
+      },
+      "unknown__corridor": {
+        "class_a": "unknown",
+        "class_b": "corridor",
+        "object_id_a": "room-unlabeled",
+        "object_id_b": "room-corridor",
+        "distance": 330.0,
+        "center_a": {
+          "x": 440.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 510.0
+        }
+      },
+      "corridor__washing_area": {
+        "class_a": "corridor",
+        "class_b": "washing_area",
+        "object_id_a": "room-corridor",
+        "object_id_b": "room-washing",
+        "distance": 20.0,
+        "center_a": {
+          "x": 390.0,
+          "y": 510.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 390.0
+        }
+      },
+      "washing_area__corridor": {
+        "class_a": "washing_area",
+        "class_b": "corridor",
+        "object_id_a": "room-washing",
+        "object_id_b": "room-corridor",
+        "distance": 20.0,
+        "center_a": {
+          "x": 620.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 510.0
+        }
+      },
+      "corridor__waste_area": {
+        "class_a": "corridor",
+        "class_b": "waste_area",
+        "object_id_a": "room-corridor",
+        "object_id_b": "room-waste",
+        "distance": 340.0,
+        "center_a": {
+          "x": 390.0,
+          "y": 510.0
+        },
+        "center_b": {
+          "x": 630.0,
+          "y": 95.0
+        }
+      },
+      "waste_area__corridor": {
+        "class_a": "waste_area",
+        "class_b": "corridor",
+        "object_id_a": "room-waste",
+        "object_id_b": "room-corridor",
+        "distance": 340.0,
+        "center_a": {
+          "x": 630.0,
+          "y": 95.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 510.0
+        }
+      },
+      "corridor__window": {
+        "class_a": "corridor",
+        "class_b": "window",
+        "object_id_a": "room-corridor",
+        "object_id_b": "window-production",
+        "distance": 210.0,
+        "center_a": {
+          "x": 390.0,
+          "y": 510.0
+        },
+        "center_b": {
+          "x": 515.0,
+          "y": 250.0
+        }
+      },
+      "window__corridor": {
+        "class_a": "window",
+        "class_b": "corridor",
+        "object_id_a": "window-production",
+        "object_id_b": "room-corridor",
+        "distance": 210.0,
+        "center_a": {
+          "x": 515.0,
+          "y": 250.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 510.0
+        }
+      },
+      "door__drain": {
+        "class_a": "door",
+        "class_b": "drain",
+        "object_id_a": "door-production",
+        "object_id_b": "drain-washing",
+        "distance": 230.21728866442677,
+        "center_a": {
+          "x": 395.0,
+          "y": 400.0
+        },
+        "center_b": {
+          "x": 660.0,
+          "y": 430.0
+        }
+      },
+      "drain__door": {
+        "class_a": "drain",
+        "class_b": "door",
+        "object_id_a": "drain-washing",
+        "object_id_b": "door-production",
+        "distance": 230.21728866442677,
+        "center_a": {
+          "x": 660.0,
+          "y": 430.0
+        },
+        "center_b": {
+          "x": 395.0,
+          "y": 400.0
+        }
+      },
+      "door__equipment": {
+        "class_a": "door",
+        "class_b": "equipment",
+        "object_id_a": "door-production",
+        "object_id_b": "equipment-mixer",
+        "distance": 90.0,
+        "center_a": {
+          "x": 395.0,
+          "y": 400.0
+        },
+        "center_b": {
+          "x": 380.0,
+          "y": 270.0
+        }
+      },
+      "equipment__door": {
+        "class_a": "equipment",
+        "class_b": "door",
+        "object_id_a": "equipment-mixer",
+        "object_id_b": "door-production",
+        "distance": 90.0,
+        "center_a": {
+          "x": 380.0,
+          "y": 270.0
+        },
+        "center_b": {
+          "x": 395.0,
+          "y": 400.0
+        }
+      },
+      "door__finished_product_storage": {
+        "class_a": "door",
+        "class_b": "finished_product_storage",
+        "object_id_a": "door-main",
+        "object_id_b": "room-finished-storage",
+        "distance": 20.0,
+        "center_a": {
+          "x": 120.0,
+          "y": 490.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 390.0
+        }
+      },
+      "finished_product_storage__door": {
+        "class_a": "finished_product_storage",
+        "class_b": "door",
+        "object_id_a": "room-finished-storage",
+        "object_id_b": "door-main",
+        "distance": 20.0,
+        "center_a": {
+          "x": 160.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 120.0,
+          "y": 490.0
+        }
+      },
+      "door__handwashing_point": {
+        "class_a": "door",
+        "class_b": "handwashing_point",
+        "object_id_a": "door-production",
+        "object_id_b": "handwash-corridor",
+        "distance": 36.05551275463989,
+        "center_a": {
+          "x": 395.0,
+          "y": 400.0
+        },
+        "center_b": {
+          "x": 465.0,
+          "y": 445.0
+        }
+      },
+      "handwashing_point__door": {
+        "class_a": "handwashing_point",
+        "class_b": "door",
+        "object_id_a": "handwash-corridor",
+        "object_id_b": "door-production",
+        "distance": 36.05551275463989,
+        "center_a": {
+          "x": 465.0,
+          "y": 445.0
+        },
+        "center_b": {
+          "x": 395.0,
+          "y": 400.0
+        }
+      },
+      "door__packaging_area": {
+        "class_a": "door",
+        "class_b": "packaging_area",
+        "object_id_a": "door-production",
+        "object_id_b": "room-packaging",
+        "distance": 150.0,
+        "center_a": {
+          "x": 395.0,
+          "y": 400.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 235.0
+        }
+      },
+      "packaging_area__door": {
+        "class_a": "packaging_area",
+        "class_b": "door",
+        "object_id_a": "room-packaging",
+        "object_id_b": "door-production",
+        "distance": 150.0,
+        "center_a": {
+          "x": 620.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 395.0,
+          "y": 400.0
+        }
+      },
+      "door__production_area": {
+        "class_a": "door",
+        "class_b": "production_area",
+        "object_id_a": "door-production",
+        "object_id_b": "room-production",
+        "distance": 0.0,
+        "center_a": {
+          "x": 395.0,
+          "y": 400.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 280.0
+        }
+      },
+      "production_area__door": {
+        "class_a": "production_area",
+        "class_b": "door",
+        "object_id_a": "room-production",
+        "object_id_b": "door-production",
+        "distance": 0.0,
+        "center_a": {
+          "x": 390.0,
+          "y": 280.0
+        },
+        "center_b": {
+          "x": 395.0,
+          "y": 400.0
+        }
+      },
+      "door__raw_material_storage": {
+        "class_a": "door",
+        "class_b": "raw_material_storage",
+        "object_id_a": "door-production",
+        "object_id_b": "room-raw-storage",
+        "distance": 158.11388300841898,
+        "center_a": {
+          "x": 395.0,
+          "y": 400.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 235.0
+        }
+      },
+      "raw_material_storage__door": {
+        "class_a": "raw_material_storage",
+        "class_b": "door",
+        "object_id_a": "room-raw-storage",
+        "object_id_b": "door-production",
+        "distance": 158.11388300841898,
+        "center_a": {
+          "x": 160.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 395.0,
+          "y": 400.0
+        }
+      },
+      "door__sink": {
+        "class_a": "door",
+        "class_b": "sink",
+        "object_id_a": "door-production",
+        "object_id_b": "sink-washing",
+        "distance": 165.3027525481654,
+        "center_a": {
+          "x": 395.0,
+          "y": 400.0
+        },
+        "center_b": {
+          "x": 605.0,
+          "y": 365.0
+        }
+      },
+      "sink__door": {
+        "class_a": "sink",
+        "class_b": "door",
+        "object_id_a": "sink-washing",
+        "object_id_b": "door-production",
+        "distance": 165.3027525481654,
+        "center_a": {
+          "x": 605.0,
+          "y": 365.0
+        },
+        "center_b": {
+          "x": 395.0,
+          "y": 400.0
+        }
+      },
+      "door__toilet": {
+        "class_a": "door",
+        "class_b": "toilet",
+        "object_id_a": "door-production",
+        "object_id_b": "room-toilet",
+        "distance": 240.20824298928628,
+        "center_a": {
+          "x": 395.0,
+          "y": 400.0
+        },
+        "center_b": {
+          "x": 310.0,
+          "y": 110.0
+        }
+      },
+      "toilet__door": {
+        "class_a": "toilet",
+        "class_b": "door",
+        "object_id_a": "room-toilet",
+        "object_id_b": "door-production",
+        "distance": 240.20824298928628,
+        "center_a": {
+          "x": 310.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 395.0,
+          "y": 400.0
+        }
+      },
+      "door__unknown": {
+        "class_a": "door",
+        "class_b": "unknown",
+        "object_id_a": "door-production",
+        "object_id_b": "room-unlabeled",
+        "distance": 240.0,
+        "center_a": {
+          "x": 395.0,
+          "y": 400.0
+        },
+        "center_b": {
+          "x": 440.0,
+          "y": 110.0
+        }
+      },
+      "unknown__door": {
+        "class_a": "unknown",
+        "class_b": "door",
+        "object_id_a": "room-unlabeled",
+        "object_id_b": "door-production",
+        "distance": 240.0,
+        "center_a": {
+          "x": 440.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 395.0,
+          "y": 400.0
+        }
+      },
+      "door__washing_area": {
+        "class_a": "door",
+        "class_b": "washing_area",
+        "object_id_a": "door-production",
+        "object_id_b": "room-washing",
+        "distance": 120.0,
+        "center_a": {
+          "x": 395.0,
+          "y": 400.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 390.0
+        }
+      },
+      "washing_area__door": {
+        "class_a": "washing_area",
+        "class_b": "door",
+        "object_id_a": "room-washing",
+        "object_id_b": "door-production",
+        "distance": 120.0,
+        "center_a": {
+          "x": 620.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 395.0,
+          "y": 400.0
+        }
+      },
+      "door__waste_area": {
+        "class_a": "door",
+        "class_b": "waste_area",
+        "object_id_a": "door-production",
+        "object_id_b": "room-waste",
+        "distance": 286.53097563788805,
+        "center_a": {
+          "x": 395.0,
+          "y": 400.0
+        },
+        "center_b": {
+          "x": 630.0,
+          "y": 95.0
+        }
+      },
+      "waste_area__door": {
+        "class_a": "waste_area",
+        "class_b": "door",
+        "object_id_a": "room-waste",
+        "object_id_b": "door-production",
+        "distance": 286.53097563788805,
+        "center_a": {
+          "x": 630.0,
+          "y": 95.0
+        },
+        "center_b": {
+          "x": 395.0,
+          "y": 400.0
+        }
+      },
+      "door__window": {
+        "class_a": "door",
+        "class_b": "window",
+        "object_id_a": "door-production",
+        "object_id_b": "window-production",
+        "distance": 144.22205101855957,
+        "center_a": {
+          "x": 395.0,
+          "y": 400.0
+        },
+        "center_b": {
+          "x": 515.0,
+          "y": 250.0
+        }
+      },
+      "window__door": {
+        "class_a": "window",
+        "class_b": "door",
+        "object_id_a": "window-production",
+        "object_id_b": "door-production",
+        "distance": 144.22205101855957,
+        "center_a": {
+          "x": 515.0,
+          "y": 250.0
+        },
+        "center_b": {
+          "x": 395.0,
+          "y": 400.0
+        }
+      },
+      "drain__equipment": {
+        "class_a": "drain",
+        "class_b": "equipment",
+        "object_id_a": "drain-washing",
+        "object_id_b": "equipment-mixer",
+        "distance": 250.59928172283335,
+        "center_a": {
+          "x": 660.0,
+          "y": 430.0
+        },
+        "center_b": {
+          "x": 380.0,
+          "y": 270.0
+        }
+      },
+      "equipment__drain": {
+        "class_a": "equipment",
+        "class_b": "drain",
+        "object_id_a": "equipment-mixer",
+        "object_id_b": "drain-washing",
+        "distance": 250.59928172283335,
+        "center_a": {
+          "x": 380.0,
+          "y": 270.0
+        },
+        "center_b": {
+          "x": 660.0,
+          "y": 430.0
+        }
+      },
+      "drain__finished_product_storage": {
+        "class_a": "drain",
+        "class_b": "finished_product_storage",
+        "object_id_a": "drain-washing",
+        "object_id_b": "room-finished-storage",
+        "distance": 410.0,
+        "center_a": {
+          "x": 660.0,
+          "y": 430.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 390.0
+        }
+      },
+      "finished_product_storage__drain": {
+        "class_a": "finished_product_storage",
+        "class_b": "drain",
+        "object_id_a": "room-finished-storage",
+        "object_id_b": "drain-washing",
+        "distance": 410.0,
+        "center_a": {
+          "x": 160.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 660.0,
+          "y": 430.0
+        }
+      },
+      "drain__handwashing_point": {
+        "class_a": "drain",
+        "class_b": "handwashing_point",
+        "object_id_a": "drain-washing",
+        "object_id_b": "handwash-corridor",
+        "distance": 170.0,
+        "center_a": {
+          "x": 660.0,
+          "y": 430.0
+        },
+        "center_b": {
+          "x": 465.0,
+          "y": 445.0
+        }
+      },
+      "handwashing_point__drain": {
+        "class_a": "handwashing_point",
+        "class_b": "drain",
+        "object_id_a": "handwash-corridor",
+        "object_id_b": "drain-washing",
+        "distance": 170.0,
+        "center_a": {
+          "x": 465.0,
+          "y": 445.0
+        },
+        "center_b": {
+          "x": 660.0,
+          "y": 430.0
+        }
+      },
+      "drain__packaging_area": {
+        "class_a": "drain",
+        "class_b": "packaging_area",
+        "object_id_a": "drain-washing",
+        "object_id_b": "room-packaging",
+        "distance": 120.0,
+        "center_a": {
+          "x": 660.0,
+          "y": 430.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 235.0
+        }
+      },
+      "packaging_area__drain": {
+        "class_a": "packaging_area",
+        "class_b": "drain",
+        "object_id_a": "room-packaging",
+        "object_id_b": "drain-washing",
+        "distance": 120.0,
+        "center_a": {
+          "x": 620.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 660.0,
+          "y": 430.0
+        }
+      },
+      "drain__production_area": {
+        "class_a": "drain",
+        "class_b": "production_area",
+        "object_id_a": "drain-washing",
+        "object_id_b": "room-production",
+        "distance": 133.41664064126334,
+        "center_a": {
+          "x": 660.0,
+          "y": 430.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 280.0
+        }
+      },
+      "production_area__drain": {
+        "class_a": "production_area",
+        "class_b": "drain",
+        "object_id_a": "room-production",
+        "object_id_b": "drain-washing",
+        "distance": 133.41664064126334,
+        "center_a": {
+          "x": 390.0,
+          "y": 280.0
+        },
+        "center_b": {
+          "x": 660.0,
+          "y": 430.0
+        }
+      },
+      "drain__raw_material_storage": {
+        "class_a": "drain",
+        "class_b": "raw_material_storage",
+        "object_id_a": "drain-washing",
+        "object_id_b": "room-raw-storage",
+        "distance": 427.20018726587654,
+        "center_a": {
+          "x": 660.0,
+          "y": 430.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 235.0
+        }
+      },
+      "raw_material_storage__drain": {
+        "class_a": "raw_material_storage",
+        "class_b": "drain",
+        "object_id_a": "room-raw-storage",
+        "object_id_b": "drain-washing",
+        "distance": 427.20018726587654,
+        "center_a": {
+          "x": 160.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 660.0,
+          "y": 430.0
+        }
+      },
+      "drain__sink": {
+        "class_a": "drain",
+        "class_b": "sink",
+        "object_id_a": "drain-washing",
+        "object_id_b": "sink-washing",
+        "distance": 47.16990566028302,
+        "center_a": {
+          "x": 660.0,
+          "y": 430.0
+        },
+        "center_b": {
+          "x": 605.0,
+          "y": 365.0
+        }
+      },
+      "sink__drain": {
+        "class_a": "sink",
+        "class_b": "drain",
+        "object_id_a": "sink-washing",
+        "object_id_b": "drain-washing",
+        "distance": 47.16990566028302,
+        "center_a": {
+          "x": 605.0,
+          "y": 365.0
+        },
+        "center_b": {
+          "x": 660.0,
+          "y": 430.0
+        }
+      },
+      "drain__toilet": {
+        "class_a": "drain",
+        "class_b": "toilet",
+        "object_id_a": "drain-washing",
+        "object_id_b": "room-toilet",
+        "distance": 396.23225512317896,
+        "center_a": {
+          "x": 660.0,
+          "y": 430.0
+        },
+        "center_b": {
+          "x": 310.0,
+          "y": 110.0
+        }
+      },
+      "toilet__drain": {
+        "class_a": "toilet",
+        "class_b": "drain",
+        "object_id_a": "room-toilet",
+        "object_id_b": "drain-washing",
+        "distance": 396.23225512317896,
+        "center_a": {
+          "x": 310.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 660.0,
+          "y": 430.0
+        }
+      },
+      "drain__unknown": {
+        "class_a": "drain",
+        "class_b": "unknown",
+        "object_id_a": "drain-washing",
+        "object_id_b": "room-unlabeled",
+        "distance": 304.138126514911,
+        "center_a": {
+          "x": 660.0,
+          "y": 430.0
+        },
+        "center_b": {
+          "x": 440.0,
+          "y": 110.0
+        }
+      },
+      "unknown__drain": {
+        "class_a": "unknown",
+        "class_b": "drain",
+        "object_id_a": "room-unlabeled",
+        "object_id_b": "drain-washing",
+        "distance": 304.138126514911,
+        "center_a": {
+          "x": 440.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 660.0,
+          "y": 430.0
+        }
+      },
+      "drain__washing_area": {
+        "class_a": "drain",
+        "class_b": "washing_area",
+        "object_id_a": "drain-washing",
+        "object_id_b": "room-washing",
+        "distance": 0.0,
+        "center_a": {
+          "x": 660.0,
+          "y": 430.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 390.0
+        }
+      },
+      "washing_area__drain": {
+        "class_a": "washing_area",
+        "class_b": "drain",
+        "object_id_a": "room-washing",
+        "object_id_b": "drain-washing",
+        "distance": 0.0,
+        "center_a": {
+          "x": 620.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 660.0,
+          "y": 430.0
+        }
+      },
+      "drain__waste_area": {
+        "class_a": "drain",
+        "class_b": "waste_area",
+        "object_id_a": "drain-washing",
+        "object_id_b": "room-waste",
+        "distance": 280.0,
+        "center_a": {
+          "x": 660.0,
+          "y": 430.0
+        },
+        "center_b": {
+          "x": 630.0,
+          "y": 95.0
+        }
+      },
+      "waste_area__drain": {
+        "class_a": "waste_area",
+        "class_b": "drain",
+        "object_id_a": "room-waste",
+        "object_id_b": "drain-washing",
+        "distance": 280.0,
+        "center_a": {
+          "x": 630.0,
+          "y": 95.0
+        },
+        "center_b": {
+          "x": 660.0,
+          "y": 430.0
+        }
+      },
+      "drain__window": {
+        "class_a": "drain",
+        "class_b": "window",
+        "object_id_a": "drain-washing",
+        "object_id_b": "window-production",
+        "distance": 192.09372712298546,
+        "center_a": {
+          "x": 660.0,
+          "y": 430.0
+        },
+        "center_b": {
+          "x": 515.0,
+          "y": 250.0
+        }
+      },
+      "window__drain": {
+        "class_a": "window",
+        "class_b": "drain",
+        "object_id_a": "window-production",
+        "object_id_b": "drain-washing",
+        "distance": 192.09372712298546,
+        "center_a": {
+          "x": 515.0,
+          "y": 250.0
+        },
+        "center_b": {
+          "x": 660.0,
+          "y": 430.0
+        }
+      },
+      "equipment__finished_product_storage": {
+        "class_a": "equipment",
+        "class_b": "finished_product_storage",
+        "object_id_a": "equipment-mixer",
+        "object_id_b": "room-finished-storage",
+        "distance": 92.19544457292888,
+        "center_a": {
+          "x": 380.0,
+          "y": 270.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 390.0
+        }
+      },
+      "finished_product_storage__equipment": {
+        "class_a": "finished_product_storage",
+        "class_b": "equipment",
+        "object_id_a": "room-finished-storage",
+        "object_id_b": "equipment-mixer",
+        "distance": 92.19544457292888,
+        "center_a": {
+          "x": 160.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 380.0,
+          "y": 270.0
+        }
+      },
+      "equipment__handwashing_point": {
+        "class_a": "equipment",
+        "class_b": "handwashing_point",
+        "object_id_a": "equipment-mixer",
+        "object_id_b": "handwash-corridor",
+        "distance": 131.52946437965906,
+        "center_a": {
+          "x": 380.0,
+          "y": 270.0
+        },
+        "center_b": {
+          "x": 465.0,
+          "y": 445.0
+        }
+      },
+      "handwashing_point__equipment": {
+        "class_a": "handwashing_point",
+        "class_b": "equipment",
+        "object_id_a": "handwash-corridor",
+        "object_id_b": "equipment-mixer",
+        "distance": 131.52946437965906,
+        "center_a": {
+          "x": 465.0,
+          "y": 445.0
+        },
+        "center_b": {
+          "x": 380.0,
+          "y": 270.0
+        }
+      },
+      "equipment__packaging_area": {
+        "class_a": "equipment",
+        "class_b": "packaging_area",
+        "object_id_a": "equipment-mixer",
+        "object_id_b": "room-packaging",
+        "distance": 110.0,
+        "center_a": {
+          "x": 380.0,
+          "y": 270.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 235.0
+        }
+      },
+      "packaging_area__equipment": {
+        "class_a": "packaging_area",
+        "class_b": "equipment",
+        "object_id_a": "room-packaging",
+        "object_id_b": "equipment-mixer",
+        "distance": 110.0,
+        "center_a": {
+          "x": 620.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 380.0,
+          "y": 270.0
+        }
+      },
+      "equipment__production_area": {
+        "class_a": "equipment",
+        "class_b": "production_area",
+        "object_id_a": "equipment-mixer",
+        "object_id_b": "room-production",
+        "distance": 0.0,
+        "center_a": {
+          "x": 380.0,
+          "y": 270.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 280.0
+        }
+      },
+      "production_area__equipment": {
+        "class_a": "production_area",
+        "class_b": "equipment",
+        "object_id_a": "room-production",
+        "object_id_b": "equipment-mixer",
+        "distance": 0.0,
+        "center_a": {
+          "x": 390.0,
+          "y": 280.0
+        },
+        "center_b": {
+          "x": 380.0,
+          "y": 270.0
+        }
+      },
+      "equipment__raw_material_storage": {
+        "class_a": "equipment",
+        "class_b": "raw_material_storage",
+        "object_id_a": "equipment-mixer",
+        "object_id_b": "room-raw-storage",
+        "distance": 90.0,
+        "center_a": {
+          "x": 380.0,
+          "y": 270.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 235.0
+        }
+      },
+      "raw_material_storage__equipment": {
+        "class_a": "raw_material_storage",
+        "class_b": "equipment",
+        "object_id_a": "room-raw-storage",
+        "object_id_b": "equipment-mixer",
+        "distance": 90.0,
+        "center_a": {
+          "x": 160.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 380.0,
+          "y": 270.0
+        }
+      },
+      "equipment__sink": {
+        "class_a": "equipment",
+        "class_b": "sink",
+        "object_id_a": "equipment-mixer",
+        "object_id_b": "sink-washing",
+        "distance": 162.8649747490233,
+        "center_a": {
+          "x": 380.0,
+          "y": 270.0
+        },
+        "center_b": {
+          "x": 605.0,
+          "y": 365.0
+        }
+      },
+      "sink__equipment": {
+        "class_a": "sink",
+        "class_b": "equipment",
+        "object_id_a": "sink-washing",
+        "object_id_b": "equipment-mixer",
+        "distance": 162.8649747490233,
+        "center_a": {
+          "x": 605.0,
+          "y": 365.0
+        },
+        "center_b": {
+          "x": 380.0,
+          "y": 270.0
+        }
+      },
+      "equipment__toilet": {
+        "class_a": "equipment",
+        "class_b": "toilet",
+        "object_id_a": "equipment-mixer",
+        "object_id_b": "room-toilet",
+        "distance": 90.0,
+        "center_a": {
+          "x": 380.0,
+          "y": 270.0
+        },
+        "center_b": {
+          "x": 310.0,
+          "y": 110.0
+        }
+      },
+      "toilet__equipment": {
+        "class_a": "toilet",
+        "class_b": "equipment",
+        "object_id_a": "room-toilet",
+        "object_id_b": "equipment-mixer",
+        "distance": 90.0,
+        "center_a": {
+          "x": 310.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 380.0,
+          "y": 270.0
+        }
+      },
+      "equipment__unknown": {
+        "class_a": "equipment",
+        "class_b": "unknown",
+        "object_id_a": "equipment-mixer",
+        "object_id_b": "room-unlabeled",
+        "distance": 90.0,
+        "center_a": {
+          "x": 380.0,
+          "y": 270.0
+        },
+        "center_b": {
+          "x": 440.0,
+          "y": 110.0
+        }
+      },
+      "unknown__equipment": {
+        "class_a": "unknown",
+        "class_b": "equipment",
+        "object_id_a": "room-unlabeled",
+        "object_id_b": "equipment-mixer",
+        "distance": 90.0,
+        "center_a": {
+          "x": 440.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 380.0,
+          "y": 270.0
+        }
+      },
+      "equipment__washing_area": {
+        "class_a": "equipment",
+        "class_b": "washing_area",
+        "object_id_a": "equipment-mixer",
+        "object_id_b": "room-washing",
+        "distance": 111.80339887498948,
+        "center_a": {
+          "x": 380.0,
+          "y": 270.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 390.0
+        }
+      },
+      "washing_area__equipment": {
+        "class_a": "washing_area",
+        "class_b": "equipment",
+        "object_id_a": "room-washing",
+        "object_id_b": "equipment-mixer",
+        "distance": 111.80339887498948,
+        "center_a": {
+          "x": 620.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 380.0,
+          "y": 270.0
+        }
+      },
+      "equipment__waste_area": {
+        "class_a": "equipment",
+        "class_b": "waste_area",
+        "object_id_a": "equipment-mixer",
+        "object_id_b": "room-waste",
+        "distance": 164.01219466856725,
+        "center_a": {
+          "x": 380.0,
+          "y": 270.0
+        },
+        "center_b": {
+          "x": 630.0,
+          "y": 95.0
+        }
+      },
+      "waste_area__equipment": {
+        "class_a": "waste_area",
+        "class_b": "equipment",
+        "object_id_a": "room-waste",
+        "object_id_b": "equipment-mixer",
+        "distance": 164.01219466856725,
+        "center_a": {
+          "x": 630.0,
+          "y": 95.0
+        },
+        "center_b": {
+          "x": 380.0,
+          "y": 270.0
+        }
+      },
+      "equipment__window": {
+        "class_a": "equipment",
+        "class_b": "window",
+        "object_id_a": "equipment-mixer",
+        "object_id_b": "window-production",
+        "distance": 70.0,
+        "center_a": {
+          "x": 380.0,
+          "y": 270.0
+        },
+        "center_b": {
+          "x": 515.0,
+          "y": 250.0
+        }
+      },
+      "window__equipment": {
+        "class_a": "window",
+        "class_b": "equipment",
+        "object_id_a": "window-production",
+        "object_id_b": "equipment-mixer",
+        "distance": 70.0,
+        "center_a": {
+          "x": 515.0,
+          "y": 250.0
+        },
+        "center_b": {
+          "x": 380.0,
+          "y": 270.0
+        }
+      },
+      "finished_product_storage__handwashing_point": {
+        "class_a": "finished_product_storage",
+        "class_b": "handwashing_point",
+        "object_id_a": "room-finished-storage",
+        "object_id_b": "handwash-corridor",
+        "distance": 210.0,
+        "center_a": {
+          "x": 160.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 465.0,
+          "y": 445.0
+        }
+      },
+      "handwashing_point__finished_product_storage": {
+        "class_a": "handwashing_point",
+        "class_b": "finished_product_storage",
+        "object_id_a": "handwash-corridor",
+        "object_id_b": "room-finished-storage",
+        "distance": 210.0,
+        "center_a": {
+          "x": 465.0,
+          "y": 445.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 390.0
+        }
+      },
+      "finished_product_storage__packaging_area": {
+        "class_a": "finished_product_storage",
+        "class_b": "packaging_area",
+        "object_id_a": "room-finished-storage",
+        "object_id_b": "room-packaging",
+        "distance": 300.66592756745814,
+        "center_a": {
+          "x": 160.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 235.0
+        }
+      },
+      "packaging_area__finished_product_storage": {
+        "class_a": "packaging_area",
+        "class_b": "finished_product_storage",
+        "object_id_a": "room-packaging",
+        "object_id_b": "room-finished-storage",
+        "distance": 300.66592756745814,
+        "center_a": {
+          "x": 620.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 390.0
+        }
+      },
+      "finished_product_storage__production_area": {
+        "class_a": "finished_product_storage",
+        "class_b": "production_area",
+        "object_id_a": "room-finished-storage",
+        "object_id_b": "room-production",
+        "distance": 20.0,
+        "center_a": {
+          "x": 160.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 280.0
+        }
+      },
+      "production_area__finished_product_storage": {
+        "class_a": "production_area",
+        "class_b": "finished_product_storage",
+        "object_id_a": "room-production",
+        "object_id_b": "room-finished-storage",
+        "distance": 20.0,
+        "center_a": {
+          "x": 390.0,
+          "y": 280.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 390.0
+        }
+      },
+      "finished_product_storage__raw_material_storage": {
+        "class_a": "finished_product_storage",
+        "class_b": "raw_material_storage",
+        "object_id_a": "room-finished-storage",
+        "object_id_b": "room-raw-storage",
+        "distance": 20.0,
+        "center_a": {
+          "x": 160.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 235.0
+        }
+      },
+      "raw_material_storage__finished_product_storage": {
+        "class_a": "raw_material_storage",
+        "class_b": "finished_product_storage",
+        "object_id_a": "room-raw-storage",
+        "object_id_b": "room-finished-storage",
+        "distance": 20.0,
+        "center_a": {
+          "x": 160.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 390.0
+        }
+      },
+      "finished_product_storage__sink": {
+        "class_a": "finished_product_storage",
+        "class_b": "sink",
+        "object_id_a": "room-finished-storage",
+        "object_id_b": "sink-washing",
+        "distance": 345.0,
+        "center_a": {
+          "x": 160.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 605.0,
+          "y": 365.0
+        }
+      },
+      "sink__finished_product_storage": {
+        "class_a": "sink",
+        "class_b": "finished_product_storage",
+        "object_id_a": "sink-washing",
+        "object_id_b": "room-finished-storage",
+        "distance": 345.0,
+        "center_a": {
+          "x": 605.0,
+          "y": 365.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 390.0
+        }
+      },
+      "finished_product_storage__toilet": {
+        "class_a": "finished_product_storage",
+        "class_b": "toilet",
+        "object_id_a": "room-finished-storage",
+        "object_id_b": "room-toilet",
+        "distance": 171.1724276862369,
+        "center_a": {
+          "x": 160.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 310.0,
+          "y": 110.0
+        }
+      },
+      "toilet__finished_product_storage": {
+        "class_a": "toilet",
+        "class_b": "finished_product_storage",
+        "object_id_a": "room-toilet",
+        "object_id_b": "room-finished-storage",
+        "distance": 171.1724276862369,
+        "center_a": {
+          "x": 310.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 390.0
+        }
+      },
+      "finished_product_storage__unknown": {
+        "class_a": "finished_product_storage",
+        "class_b": "unknown",
+        "object_id_a": "room-finished-storage",
+        "object_id_b": "room-unlabeled",
+        "distance": 214.00934559032697,
+        "center_a": {
+          "x": 160.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 440.0,
+          "y": 110.0
+        }
+      },
+      "unknown__finished_product_storage": {
+        "class_a": "unknown",
+        "class_b": "finished_product_storage",
+        "object_id_a": "room-unlabeled",
+        "object_id_b": "room-finished-storage",
+        "distance": 214.00934559032697,
+        "center_a": {
+          "x": 440.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 390.0
+        }
+      },
+      "finished_product_storage__washing_area": {
+        "class_a": "finished_product_storage",
+        "class_b": "washing_area",
+        "object_id_a": "room-finished-storage",
+        "object_id_b": "room-washing",
+        "distance": 300.0,
+        "center_a": {
+          "x": 160.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 390.0
+        }
+      },
+      "washing_area__finished_product_storage": {
+        "class_a": "washing_area",
+        "class_b": "finished_product_storage",
+        "object_id_a": "room-washing",
+        "object_id_b": "room-finished-storage",
+        "distance": 300.0,
+        "center_a": {
+          "x": 620.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 390.0
+        }
+      },
+      "finished_product_storage__waste_area": {
+        "class_a": "finished_product_storage",
+        "class_b": "waste_area",
+        "object_id_a": "room-finished-storage",
+        "object_id_b": "room-waste",
+        "distance": 367.1511950137164,
+        "center_a": {
+          "x": 160.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 630.0,
+          "y": 95.0
+        }
+      },
+      "waste_area__finished_product_storage": {
+        "class_a": "waste_area",
+        "class_b": "finished_product_storage",
+        "object_id_a": "room-waste",
+        "object_id_b": "room-finished-storage",
+        "distance": 367.1511950137164,
+        "center_a": {
+          "x": 630.0,
+          "y": 95.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 390.0
+        }
+      },
+      "finished_product_storage__window": {
+        "class_a": "finished_product_storage",
+        "class_b": "window",
+        "object_id_a": "room-finished-storage",
+        "object_id_b": "window-production",
+        "distance": 264.76404589747455,
+        "center_a": {
+          "x": 160.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 515.0,
+          "y": 250.0
+        }
+      },
+      "window__finished_product_storage": {
+        "class_a": "window",
+        "class_b": "finished_product_storage",
+        "object_id_a": "window-production",
+        "object_id_b": "room-finished-storage",
+        "distance": 264.76404589747455,
+        "center_a": {
+          "x": 515.0,
+          "y": 250.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 390.0
+        }
+      },
+      "handwashing_point__packaging_area": {
+        "class_a": "handwashing_point",
+        "class_b": "packaging_area",
+        "object_id_a": "handwash-corridor",
+        "object_id_b": "room-packaging",
+        "distance": 143.17821063276352,
+        "center_a": {
+          "x": 465.0,
+          "y": 445.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 235.0
+        }
+      },
+      "packaging_area__handwashing_point": {
+        "class_a": "packaging_area",
+        "class_b": "handwashing_point",
+        "object_id_a": "room-packaging",
+        "object_id_b": "handwash-corridor",
+        "distance": 143.17821063276352,
+        "center_a": {
+          "x": 620.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 465.0,
+          "y": 445.0
+        }
+      },
+      "handwashing_point__production_area": {
+        "class_a": "handwashing_point",
+        "class_b": "production_area",
+        "object_id_a": "handwash-corridor",
+        "object_id_b": "room-production",
+        "distance": 40.0,
+        "center_a": {
+          "x": 465.0,
+          "y": 445.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 280.0
+        }
+      },
+      "production_area__handwashing_point": {
+        "class_a": "production_area",
+        "class_b": "handwashing_point",
+        "object_id_a": "room-production",
+        "object_id_b": "handwash-corridor",
+        "distance": 40.0,
+        "center_a": {
+          "x": 390.0,
+          "y": 280.0
+        },
+        "center_b": {
+          "x": 465.0,
+          "y": 445.0
+        }
+      },
+      "handwashing_point__raw_material_storage": {
+        "class_a": "handwashing_point",
+        "class_b": "raw_material_storage",
+        "object_id_a": "handwash-corridor",
+        "object_id_b": "room-raw-storage",
+        "distance": 246.9817807045694,
+        "center_a": {
+          "x": 465.0,
+          "y": 445.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 235.0
+        }
+      },
+      "raw_material_storage__handwashing_point": {
+        "class_a": "raw_material_storage",
+        "class_b": "handwashing_point",
+        "object_id_a": "room-raw-storage",
+        "object_id_b": "handwash-corridor",
+        "distance": 246.9817807045694,
+        "center_a": {
+          "x": 160.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 465.0,
+          "y": 445.0
+        }
+      },
+      "handwashing_point__sink": {
+        "class_a": "handwashing_point",
+        "class_b": "sink",
+        "object_id_a": "handwash-corridor",
+        "object_id_b": "sink-washing",
+        "distance": 116.29703349613007,
+        "center_a": {
+          "x": 465.0,
+          "y": 445.0
+        },
+        "center_b": {
+          "x": 605.0,
+          "y": 365.0
+        }
+      },
+      "sink__handwashing_point": {
+        "class_a": "sink",
+        "class_b": "handwashing_point",
+        "object_id_a": "sink-washing",
+        "object_id_b": "handwash-corridor",
+        "distance": 116.29703349613007,
+        "center_a": {
+          "x": 605.0,
+          "y": 365.0
+        },
+        "center_b": {
+          "x": 465.0,
+          "y": 445.0
+        }
+      },
+      "handwashing_point__toilet": {
+        "class_a": "handwashing_point",
+        "class_b": "toilet",
+        "object_id_a": "handwash-corridor",
+        "object_id_b": "room-toilet",
+        "distance": 294.10882339705483,
+        "center_a": {
+          "x": 465.0,
+          "y": 445.0
+        },
+        "center_b": {
+          "x": 310.0,
+          "y": 110.0
+        }
+      },
+      "toilet__handwashing_point": {
+        "class_a": "toilet",
+        "class_b": "handwashing_point",
+        "object_id_a": "room-toilet",
+        "object_id_b": "handwash-corridor",
+        "distance": 294.10882339705483,
+        "center_a": {
+          "x": 310.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 465.0,
+          "y": 445.0
+        }
+      },
+      "handwashing_point__unknown": {
+        "class_a": "handwashing_point",
+        "class_b": "unknown",
+        "object_id_a": "handwash-corridor",
+        "object_id_b": "room-unlabeled",
+        "distance": 280.0,
+        "center_a": {
+          "x": 465.0,
+          "y": 445.0
+        },
+        "center_b": {
+          "x": 440.0,
+          "y": 110.0
+        }
+      },
+      "unknown__handwashing_point": {
+        "class_a": "unknown",
+        "class_b": "handwashing_point",
+        "object_id_a": "room-unlabeled",
+        "object_id_b": "handwash-corridor",
+        "distance": 280.0,
+        "center_a": {
+          "x": 440.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 465.0,
+          "y": 445.0
+        }
+      },
+      "handwashing_point__washing_area": {
+        "class_a": "handwashing_point",
+        "class_b": "washing_area",
+        "object_id_a": "handwash-corridor",
+        "object_id_b": "room-washing",
+        "distance": 60.0,
+        "center_a": {
+          "x": 465.0,
+          "y": 445.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 390.0
+        }
+      },
+      "washing_area__handwashing_point": {
+        "class_a": "washing_area",
+        "class_b": "handwashing_point",
+        "object_id_a": "room-washing",
+        "object_id_b": "handwash-corridor",
+        "distance": 60.0,
+        "center_a": {
+          "x": 620.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 465.0,
+          "y": 445.0
+        }
+      },
+      "handwashing_point__waste_area": {
+        "class_a": "handwashing_point",
+        "class_b": "waste_area",
+        "object_id_a": "handwash-corridor",
+        "object_id_b": "room-waste",
+        "distance": 300.83217912982644,
+        "center_a": {
+          "x": 465.0,
+          "y": 445.0
+        },
+        "center_b": {
+          "x": 630.0,
+          "y": 95.0
+        }
+      },
+      "waste_area__handwashing_point": {
+        "class_a": "waste_area",
+        "class_b": "handwashing_point",
+        "object_id_a": "room-waste",
+        "object_id_b": "handwash-corridor",
+        "distance": 300.83217912982644,
+        "center_a": {
+          "x": 630.0,
+          "y": 95.0
+        },
+        "center_b": {
+          "x": 465.0,
+          "y": 445.0
+        }
+      },
+      "handwashing_point__window": {
+        "class_a": "handwashing_point",
+        "class_b": "window",
+        "object_id_a": "handwash-corridor",
+        "object_id_b": "window-production",
+        "distance": 161.24515496597098,
+        "center_a": {
+          "x": 465.0,
+          "y": 445.0
+        },
+        "center_b": {
+          "x": 515.0,
+          "y": 250.0
+        }
+      },
+      "window__handwashing_point": {
+        "class_a": "window",
+        "class_b": "handwashing_point",
+        "object_id_a": "window-production",
+        "object_id_b": "handwash-corridor",
+        "distance": 161.24515496597098,
+        "center_a": {
+          "x": 515.0,
+          "y": 250.0
+        },
+        "center_b": {
+          "x": 465.0,
+          "y": 445.0
+        }
+      },
+      "packaging_area__production_area": {
+        "class_a": "packaging_area",
+        "class_b": "production_area",
+        "object_id_a": "room-packaging",
+        "object_id_b": "room-production",
+        "distance": 20.0,
+        "center_a": {
+          "x": 620.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 280.0
+        }
+      },
+      "production_area__packaging_area": {
+        "class_a": "production_area",
+        "class_b": "packaging_area",
+        "object_id_a": "room-production",
+        "object_id_b": "room-packaging",
+        "distance": 20.0,
+        "center_a": {
+          "x": 390.0,
+          "y": 280.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 235.0
+        }
+      },
+      "packaging_area__raw_material_storage": {
+        "class_a": "packaging_area",
+        "class_b": "raw_material_storage",
+        "object_id_a": "room-packaging",
+        "object_id_b": "room-raw-storage",
+        "distance": 300.0,
+        "center_a": {
+          "x": 620.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 235.0
+        }
+      },
+      "raw_material_storage__packaging_area": {
+        "class_a": "raw_material_storage",
+        "class_b": "packaging_area",
+        "object_id_a": "room-raw-storage",
+        "object_id_b": "room-packaging",
+        "distance": 300.0,
+        "center_a": {
+          "x": 160.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 235.0
+        }
+      },
+      "packaging_area__sink": {
+        "class_a": "packaging_area",
+        "class_b": "sink",
+        "object_id_a": "room-packaging",
+        "object_id_b": "sink-washing",
+        "distance": 50.0,
+        "center_a": {
+          "x": 620.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 605.0,
+          "y": 365.0
+        }
+      },
+      "sink__packaging_area": {
+        "class_a": "sink",
+        "class_b": "packaging_area",
+        "object_id_a": "sink-washing",
+        "object_id_b": "room-packaging",
+        "distance": 50.0,
+        "center_a": {
+          "x": 605.0,
+          "y": 365.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 235.0
+        }
+      },
+      "packaging_area__toilet": {
+        "class_a": "packaging_area",
+        "class_b": "toilet",
+        "object_id_a": "room-packaging",
+        "object_id_b": "room-toilet",
+        "distance": 181.10770276274835,
+        "center_a": {
+          "x": 620.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 310.0,
+          "y": 110.0
+        }
+      },
+      "toilet__packaging_area": {
+        "class_a": "toilet",
+        "class_b": "packaging_area",
+        "object_id_a": "room-toilet",
+        "object_id_b": "room-packaging",
+        "distance": 181.10770276274835,
+        "center_a": {
+          "x": 310.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 235.0
+        }
+      },
+      "packaging_area__unknown": {
+        "class_a": "packaging_area",
+        "class_b": "unknown",
+        "object_id_a": "room-packaging",
+        "object_id_b": "room-unlabeled",
+        "distance": 36.05551275463989,
+        "center_a": {
+          "x": 620.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 440.0,
+          "y": 110.0
+        }
+      },
+      "unknown__packaging_area": {
+        "class_a": "unknown",
+        "class_b": "packaging_area",
+        "object_id_a": "room-unlabeled",
+        "object_id_b": "room-packaging",
+        "distance": 36.05551275463989,
+        "center_a": {
+          "x": 440.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 235.0
+        }
+      },
+      "packaging_area__washing_area": {
+        "class_a": "packaging_area",
+        "class_b": "washing_area",
+        "object_id_a": "room-packaging",
+        "object_id_b": "room-washing",
+        "distance": 20.0,
+        "center_a": {
+          "x": 620.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 390.0
+        }
+      },
+      "washing_area__packaging_area": {
+        "class_a": "washing_area",
+        "class_b": "packaging_area",
+        "object_id_a": "room-washing",
+        "object_id_b": "room-packaging",
+        "distance": 20.0,
+        "center_a": {
+          "x": 620.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 235.0
+        }
+      },
+      "packaging_area__waste_area": {
+        "class_a": "packaging_area",
+        "class_b": "waste_area",
+        "object_id_a": "room-packaging",
+        "object_id_b": "room-waste",
+        "distance": 30.0,
+        "center_a": {
+          "x": 620.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 630.0,
+          "y": 95.0
+        }
+      },
+      "waste_area__packaging_area": {
+        "class_a": "waste_area",
+        "class_b": "packaging_area",
+        "object_id_a": "room-waste",
+        "object_id_b": "room-packaging",
+        "distance": 30.0,
+        "center_a": {
+          "x": 630.0,
+          "y": 95.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 235.0
+        }
+      },
+      "packaging_area__window": {
+        "class_a": "packaging_area",
+        "class_b": "window",
+        "object_id_a": "room-packaging",
+        "object_id_b": "window-production",
+        "distance": 10.0,
+        "center_a": {
+          "x": 620.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 515.0,
+          "y": 250.0
+        }
+      },
+      "window__packaging_area": {
+        "class_a": "window",
+        "class_b": "packaging_area",
+        "object_id_a": "window-production",
+        "object_id_b": "room-packaging",
+        "distance": 10.0,
+        "center_a": {
+          "x": 515.0,
+          "y": 250.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 235.0
+        }
+      },
+      "production_area__raw_material_storage": {
+        "class_a": "production_area",
+        "class_b": "raw_material_storage",
+        "object_id_a": "room-production",
+        "object_id_b": "room-raw-storage",
+        "distance": 20.0,
+        "center_a": {
+          "x": 390.0,
+          "y": 280.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 235.0
+        }
+      },
+      "raw_material_storage__production_area": {
+        "class_a": "raw_material_storage",
+        "class_b": "production_area",
+        "object_id_a": "room-raw-storage",
+        "object_id_b": "room-production",
+        "distance": 20.0,
+        "center_a": {
+          "x": 160.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 280.0
+        }
+      },
+      "production_area__sink": {
+        "class_a": "production_area",
+        "class_b": "sink",
+        "object_id_a": "room-production",
+        "object_id_b": "sink-washing",
+        "distance": 65.0,
+        "center_a": {
+          "x": 390.0,
+          "y": 280.0
+        },
+        "center_b": {
+          "x": 605.0,
+          "y": 365.0
+        }
+      },
+      "sink__production_area": {
+        "class_a": "sink",
+        "class_b": "production_area",
+        "object_id_a": "sink-washing",
+        "object_id_b": "room-production",
+        "distance": 65.0,
+        "center_a": {
+          "x": 605.0,
+          "y": 365.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 280.0
+        }
+      },
+      "production_area__toilet": {
+        "class_a": "production_area",
+        "class_b": "toilet",
+        "object_id_a": "room-production",
+        "object_id_b": "room-toilet",
+        "distance": 20.0,
+        "center_a": {
+          "x": 390.0,
+          "y": 280.0
+        },
+        "center_b": {
+          "x": 310.0,
+          "y": 110.0
+        }
+      },
+      "toilet__production_area": {
+        "class_a": "toilet",
+        "class_b": "production_area",
+        "object_id_a": "room-toilet",
+        "object_id_b": "room-production",
+        "distance": 20.0,
+        "center_a": {
+          "x": 310.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 280.0
+        }
+      },
+      "production_area__unknown": {
+        "class_a": "production_area",
+        "class_b": "unknown",
+        "object_id_a": "room-production",
+        "object_id_b": "room-unlabeled",
+        "distance": 20.0,
+        "center_a": {
+          "x": 390.0,
+          "y": 280.0
+        },
+        "center_b": {
+          "x": 440.0,
+          "y": 110.0
+        }
+      },
+      "unknown__production_area": {
+        "class_a": "unknown",
+        "class_b": "production_area",
+        "object_id_a": "room-unlabeled",
+        "object_id_b": "room-production",
+        "distance": 20.0,
+        "center_a": {
+          "x": 440.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 280.0
+        }
+      },
+      "production_area__washing_area": {
+        "class_a": "production_area",
+        "class_b": "washing_area",
+        "object_id_a": "room-production",
+        "object_id_b": "room-washing",
+        "distance": 20.0,
+        "center_a": {
+          "x": 390.0,
+          "y": 280.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 390.0
+        }
+      },
+      "washing_area__production_area": {
+        "class_a": "washing_area",
+        "class_b": "production_area",
+        "object_id_a": "room-washing",
+        "object_id_b": "room-production",
+        "distance": 20.0,
+        "center_a": {
+          "x": 620.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 280.0
+        }
+      },
+      "production_area__waste_area": {
+        "class_a": "production_area",
+        "class_b": "waste_area",
+        "object_id_a": "room-production",
+        "object_id_b": "room-waste",
+        "distance": 50.0,
+        "center_a": {
+          "x": 390.0,
+          "y": 280.0
+        },
+        "center_b": {
+          "x": 630.0,
+          "y": 95.0
+        }
+      },
+      "waste_area__production_area": {
+        "class_a": "waste_area",
+        "class_b": "production_area",
+        "object_id_a": "room-waste",
+        "object_id_b": "room-production",
+        "distance": 50.0,
+        "center_a": {
+          "x": 630.0,
+          "y": 95.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 280.0
+        }
+      },
+      "production_area__window": {
+        "class_a": "production_area",
+        "class_b": "window",
+        "object_id_a": "room-production",
+        "object_id_b": "window-production",
+        "distance": 0.0,
+        "center_a": {
+          "x": 390.0,
+          "y": 280.0
+        },
+        "center_b": {
+          "x": 515.0,
+          "y": 250.0
+        }
+      },
+      "window__production_area": {
+        "class_a": "window",
+        "class_b": "production_area",
+        "object_id_a": "window-production",
+        "object_id_b": "room-production",
+        "distance": 0.0,
+        "center_a": {
+          "x": 515.0,
+          "y": 250.0
+        },
+        "center_b": {
+          "x": 390.0,
+          "y": 280.0
+        }
+      },
+      "raw_material_storage__sink": {
+        "class_a": "raw_material_storage",
+        "class_b": "sink",
+        "object_id_a": "room-raw-storage",
+        "object_id_b": "sink-washing",
+        "distance": 348.60436027106715,
+        "center_a": {
+          "x": 160.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 605.0,
+          "y": 365.0
+        }
+      },
+      "sink__raw_material_storage": {
+        "class_a": "sink",
+        "class_b": "raw_material_storage",
+        "object_id_a": "sink-washing",
+        "object_id_b": "room-raw-storage",
+        "distance": 348.60436027106715,
+        "center_a": {
+          "x": 605.0,
+          "y": 365.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 235.0
+        }
+      },
+      "raw_material_storage__toilet": {
+        "class_a": "raw_material_storage",
+        "class_b": "toilet",
+        "object_id_a": "room-raw-storage",
+        "object_id_b": "room-toilet",
+        "distance": 28.284271247461902,
+        "center_a": {
+          "x": 160.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 310.0,
+          "y": 110.0
+        }
+      },
+      "toilet__raw_material_storage": {
+        "class_a": "toilet",
+        "class_b": "raw_material_storage",
+        "object_id_a": "room-toilet",
+        "object_id_b": "room-raw-storage",
+        "distance": 28.284271247461902,
+        "center_a": {
+          "x": 310.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 235.0
+        }
+      },
+      "raw_material_storage__unknown": {
+        "class_a": "raw_material_storage",
+        "class_b": "unknown",
+        "object_id_a": "room-raw-storage",
+        "object_id_b": "room-unlabeled",
+        "distance": 131.52946437965906,
+        "center_a": {
+          "x": 160.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 440.0,
+          "y": 110.0
+        }
+      },
+      "unknown__raw_material_storage": {
+        "class_a": "unknown",
+        "class_b": "raw_material_storage",
+        "object_id_a": "room-unlabeled",
+        "object_id_b": "room-raw-storage",
+        "distance": 131.52946437965906,
+        "center_a": {
+          "x": 440.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 235.0
+        }
+      },
+      "raw_material_storage__washing_area": {
+        "class_a": "raw_material_storage",
+        "class_b": "washing_area",
+        "object_id_a": "room-raw-storage",
+        "object_id_b": "room-washing",
+        "distance": 300.66592756745814,
+        "center_a": {
+          "x": 160.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 390.0
+        }
+      },
+      "washing_area__raw_material_storage": {
+        "class_a": "washing_area",
+        "class_b": "raw_material_storage",
+        "object_id_a": "room-washing",
+        "object_id_b": "room-raw-storage",
+        "distance": 300.66592756745814,
+        "center_a": {
+          "x": 620.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 235.0
+        }
+      },
+      "raw_material_storage__waste_area": {
+        "class_a": "raw_material_storage",
+        "class_b": "waste_area",
+        "object_id_a": "room-raw-storage",
+        "object_id_b": "room-waste",
+        "distance": 321.40317359976393,
+        "center_a": {
+          "x": 160.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 630.0,
+          "y": 95.0
+        }
+      },
+      "waste_area__raw_material_storage": {
+        "class_a": "waste_area",
+        "class_b": "raw_material_storage",
+        "object_id_a": "room-waste",
+        "object_id_b": "room-raw-storage",
+        "distance": 321.40317359976393,
+        "center_a": {
+          "x": 630.0,
+          "y": 95.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 235.0
+        }
+      },
+      "raw_material_storage__window": {
+        "class_a": "raw_material_storage",
+        "class_b": "window",
+        "object_id_a": "room-raw-storage",
+        "object_id_b": "window-production",
+        "distance": 260.0,
+        "center_a": {
+          "x": 160.0,
+          "y": 235.0
+        },
+        "center_b": {
+          "x": 515.0,
+          "y": 250.0
+        }
+      },
+      "window__raw_material_storage": {
+        "class_a": "window",
+        "class_b": "raw_material_storage",
+        "object_id_a": "window-production",
+        "object_id_b": "room-raw-storage",
+        "distance": 260.0,
+        "center_a": {
+          "x": 515.0,
+          "y": 250.0
+        },
+        "center_b": {
+          "x": 160.0,
+          "y": 235.0
+        }
+      },
+      "sink__toilet": {
+        "class_a": "sink",
+        "class_b": "toilet",
+        "object_id_a": "sink-washing",
+        "object_id_b": "room-toilet",
+        "distance": 301.0398644698074,
+        "center_a": {
+          "x": 605.0,
+          "y": 365.0
+        },
+        "center_b": {
+          "x": 310.0,
+          "y": 110.0
+        }
+      },
+      "toilet__sink": {
+        "class_a": "toilet",
+        "class_b": "sink",
+        "object_id_a": "room-toilet",
+        "object_id_b": "sink-washing",
+        "distance": 301.0398644698074,
+        "center_a": {
+          "x": 310.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 605.0,
+          "y": 365.0
+        }
+      },
+      "sink__unknown": {
+        "class_a": "sink",
+        "class_b": "unknown",
+        "object_id_a": "sink-washing",
+        "object_id_b": "room-unlabeled",
+        "distance": 213.60009363293827,
+        "center_a": {
+          "x": 605.0,
+          "y": 365.0
+        },
+        "center_b": {
+          "x": 440.0,
+          "y": 110.0
+        }
+      },
+      "unknown__sink": {
+        "class_a": "unknown",
+        "class_b": "sink",
+        "object_id_a": "room-unlabeled",
+        "object_id_b": "sink-washing",
+        "distance": 213.60009363293827,
+        "center_a": {
+          "x": 440.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 605.0,
+          "y": 365.0
+        }
+      },
+      "sink__washing_area": {
+        "class_a": "sink",
+        "class_b": "washing_area",
+        "object_id_a": "sink-washing",
+        "object_id_b": "room-washing",
+        "distance": 0.0,
+        "center_a": {
+          "x": 605.0,
+          "y": 365.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 390.0
+        }
+      },
+      "washing_area__sink": {
+        "class_a": "washing_area",
+        "class_b": "sink",
+        "object_id_a": "room-washing",
+        "object_id_b": "sink-washing",
+        "distance": 0.0,
+        "center_a": {
+          "x": 620.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 605.0,
+          "y": 365.0
+        }
+      },
+      "sink__waste_area": {
+        "class_a": "sink",
+        "class_b": "waste_area",
+        "object_id_a": "sink-washing",
+        "object_id_b": "room-waste",
+        "distance": 210.0,
+        "center_a": {
+          "x": 605.0,
+          "y": 365.0
+        },
+        "center_b": {
+          "x": 630.0,
+          "y": 95.0
+        }
+      },
+      "waste_area__sink": {
+        "class_a": "waste_area",
+        "class_b": "sink",
+        "object_id_a": "room-waste",
+        "object_id_b": "sink-washing",
+        "distance": 210.0,
+        "center_a": {
+          "x": 630.0,
+          "y": 95.0
+        },
+        "center_b": {
+          "x": 605.0,
+          "y": 365.0
+        }
+      },
+      "sink__window": {
+        "class_a": "sink",
+        "class_b": "window",
+        "object_id_a": "sink-washing",
+        "object_id_b": "window-production",
+        "distance": 97.082439194738,
+        "center_a": {
+          "x": 605.0,
+          "y": 365.0
+        },
+        "center_b": {
+          "x": 515.0,
+          "y": 250.0
+        }
+      },
+      "window__sink": {
+        "class_a": "window",
+        "class_b": "sink",
+        "object_id_a": "window-production",
+        "object_id_b": "sink-washing",
+        "distance": 97.082439194738,
+        "center_a": {
+          "x": 515.0,
+          "y": 250.0
+        },
+        "center_b": {
+          "x": 605.0,
+          "y": 365.0
+        }
+      },
+      "toilet__unknown": {
+        "class_a": "toilet",
+        "class_b": "unknown",
+        "object_id_a": "room-toilet",
+        "object_id_b": "room-unlabeled",
+        "distance": 10.0,
+        "center_a": {
+          "x": 310.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 440.0,
+          "y": 110.0
+        }
+      },
+      "unknown__toilet": {
+        "class_a": "unknown",
+        "class_b": "toilet",
+        "object_id_a": "room-unlabeled",
+        "object_id_b": "room-toilet",
+        "distance": 10.0,
+        "center_a": {
+          "x": 440.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 310.0,
+          "y": 110.0
+        }
+      },
+      "toilet__washing_area": {
+        "class_a": "toilet",
+        "class_b": "washing_area",
+        "object_id_a": "room-toilet",
+        "object_id_b": "room-washing",
+        "distance": 247.58836806279893,
+        "center_a": {
+          "x": 310.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 390.0
+        }
+      },
+      "washing_area__toilet": {
+        "class_a": "washing_area",
+        "class_b": "toilet",
+        "object_id_a": "room-washing",
+        "object_id_b": "room-toilet",
+        "distance": 247.58836806279893,
+        "center_a": {
+          "x": 620.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 310.0,
+          "y": 110.0
+        }
+      },
+      "toilet__waste_area": {
+        "class_a": "toilet",
+        "class_b": "waste_area",
+        "object_id_a": "room-toilet",
+        "object_id_b": "room-waste",
+        "distance": 200.0,
+        "center_a": {
+          "x": 310.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 630.0,
+          "y": 95.0
+        }
+      },
+      "waste_area__toilet": {
+        "class_a": "waste_area",
+        "class_b": "toilet",
+        "object_id_a": "room-waste",
+        "object_id_b": "room-toilet",
+        "distance": 200.0,
+        "center_a": {
+          "x": 630.0,
+          "y": 95.0
+        },
+        "center_b": {
+          "x": 310.0,
+          "y": 110.0
+        }
+      },
+      "toilet__window": {
+        "class_a": "toilet",
+        "class_b": "window",
+        "object_id_a": "room-toilet",
+        "object_id_b": "window-production",
+        "distance": 161.24515496597098,
+        "center_a": {
+          "x": 310.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 515.0,
+          "y": 250.0
+        }
+      },
+      "window__toilet": {
+        "class_a": "window",
+        "class_b": "toilet",
+        "object_id_a": "window-production",
+        "object_id_b": "room-toilet",
+        "distance": 161.24515496597098,
+        "center_a": {
+          "x": 515.0,
+          "y": 250.0
+        },
+        "center_b": {
+          "x": 310.0,
+          "y": 110.0
+        }
+      },
+      "unknown__washing_area": {
+        "class_a": "unknown",
+        "class_b": "washing_area",
+        "object_id_a": "room-unlabeled",
+        "object_id_b": "room-washing",
+        "distance": 172.6267650163207,
+        "center_a": {
+          "x": 440.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 390.0
+        }
+      },
+      "washing_area__unknown": {
+        "class_a": "washing_area",
+        "class_b": "unknown",
+        "object_id_a": "room-washing",
+        "object_id_b": "room-unlabeled",
+        "distance": 172.6267650163207,
+        "center_a": {
+          "x": 620.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 440.0,
+          "y": 110.0
+        }
+      },
+      "unknown__waste_area": {
+        "class_a": "unknown",
+        "class_b": "waste_area",
+        "object_id_a": "room-unlabeled",
+        "object_id_b": "room-waste",
+        "distance": 50.0,
+        "center_a": {
+          "x": 440.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 630.0,
+          "y": 95.0
+        }
+      },
+      "waste_area__unknown": {
+        "class_a": "waste_area",
+        "class_b": "unknown",
+        "object_id_a": "room-waste",
+        "object_id_b": "room-unlabeled",
+        "distance": 50.0,
+        "center_a": {
+          "x": 630.0,
+          "y": 95.0
+        },
+        "center_b": {
+          "x": 440.0,
+          "y": 110.0
+        }
+      },
+      "unknown__window": {
+        "class_a": "unknown",
+        "class_b": "window",
+        "object_id_a": "room-unlabeled",
+        "object_id_b": "window-production",
+        "distance": 80.0,
+        "center_a": {
+          "x": 440.0,
+          "y": 110.0
+        },
+        "center_b": {
+          "x": 515.0,
+          "y": 250.0
+        }
+      },
+      "window__unknown": {
+        "class_a": "window",
+        "class_b": "unknown",
+        "object_id_a": "window-production",
+        "object_id_b": "room-unlabeled",
+        "distance": 80.0,
+        "center_a": {
+          "x": 515.0,
+          "y": 250.0
+        },
+        "center_b": {
+          "x": 440.0,
+          "y": 110.0
+        }
+      },
+      "washing_area__waste_area": {
+        "class_a": "washing_area",
+        "class_b": "waste_area",
+        "object_id_a": "room-washing",
+        "object_id_b": "room-waste",
+        "distance": 180.0,
+        "center_a": {
+          "x": 620.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 630.0,
+          "y": 95.0
+        }
+      },
+      "waste_area__washing_area": {
+        "class_a": "waste_area",
+        "class_b": "washing_area",
+        "object_id_a": "room-waste",
+        "object_id_b": "room-washing",
+        "distance": 180.0,
+        "center_a": {
+          "x": 630.0,
+          "y": 95.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 390.0
+        }
+      },
+      "washing_area__window": {
+        "class_a": "washing_area",
+        "class_b": "window",
+        "object_id_a": "room-washing",
+        "object_id_b": "window-production",
+        "distance": 50.99019513592785,
+        "center_a": {
+          "x": 620.0,
+          "y": 390.0
+        },
+        "center_b": {
+          "x": 515.0,
+          "y": 250.0
+        }
+      },
+      "window__washing_area": {
+        "class_a": "window",
+        "class_b": "washing_area",
+        "object_id_a": "window-production",
+        "object_id_b": "room-washing",
+        "distance": 50.99019513592785,
+        "center_a": {
+          "x": 515.0,
+          "y": 250.0
+        },
+        "center_b": {
+          "x": 620.0,
+          "y": 390.0
+        }
+      },
+      "waste_area__window": {
+        "class_a": "waste_area",
+        "class_b": "window",
+        "object_id_a": "room-waste",
+        "object_id_b": "window-production",
+        "distance": 94.86832980505137,
+        "center_a": {
+          "x": 630.0,
+          "y": 95.0
+        },
+        "center_b": {
+          "x": 515.0,
+          "y": 250.0
+        }
+      },
+      "window__waste_area": {
+        "class_a": "window",
+        "class_b": "waste_area",
+        "object_id_a": "window-production",
+        "object_id_b": "room-waste",
+        "distance": 94.86832980505137,
+        "center_a": {
+          "x": 515.0,
+          "y": 250.0
+        },
+        "center_b": {
+          "x": 630.0,
+          "y": 95.0
+        }
+      }
+    },
+    "flow_intersections": [
+      {
+        "flow_id_a": "flow-product",
+        "flow_type_a": "product_flow",
+        "segment_index_a": 1,
+        "flow_id_b": "flow-waste",
+        "flow_type_b": "waste_flow",
+        "segment_index_b": 0,
+        "related_object_ids": [
+          "room-finished-storage",
+          "room-packaging",
+          "room-production",
+          "room-washing",
+          "room-waste"
+        ]
+      },
+      {
+        "flow_id_a": "flow-product",
+        "flow_type_a": "product_flow",
+        "segment_index_a": 1,
+        "flow_id_b": "flow-waste",
+        "flow_type_b": "waste_flow",
+        "segment_index_b": 1,
+        "related_object_ids": [
+          "room-finished-storage",
+          "room-packaging",
+          "room-production",
+          "room-washing",
+          "room-waste"
+        ]
+      },
+      {
+        "flow_id_a": "flow-product",
+        "flow_type_a": "product_flow",
+        "segment_index_a": 2,
+        "flow_id_b": "flow-waste",
+        "flow_type_b": "waste_flow",
+        "segment_index_b": 0,
+        "related_object_ids": [
+          "room-finished-storage",
+          "room-packaging",
+          "room-production",
+          "room-washing",
+          "room-waste"
+        ]
+      },
+      {
+        "flow_id_a": "flow-product",
+        "flow_type_a": "product_flow",
+        "segment_index_a": 2,
+        "flow_id_b": "flow-waste",
+        "flow_type_b": "waste_flow",
+        "segment_index_b": 1,
+        "related_object_ids": [
+          "room-finished-storage",
+          "room-packaging",
+          "room-production",
+          "room-washing",
+          "room-waste"
+        ]
+      },
+      {
+        "flow_id_a": "flow-product",
+        "flow_type_a": "product_flow",
+        "segment_index_a": 3,
+        "flow_id_b": "flow-waste",
+        "flow_type_b": "waste_flow",
+        "segment_index_b": 2,
+        "related_object_ids": [
+          "room-finished-storage",
+          "room-packaging",
+          "room-production",
+          "room-washing",
+          "room-waste"
+        ]
+      },
+      {
+        "flow_id_a": "flow-product",
+        "flow_type_a": "product_flow",
+        "segment_index_a": 0,
+        "flow_id_b": "flow-personnel",
+        "flow_type_b": "personnel_flow",
+        "segment_index_b": 2,
+        "related_object_ids": [
+          "door-main",
+          "door-production",
+          "room-finished-storage",
+          "room-packaging",
+          "room-production"
+        ]
+      },
+      {
+        "flow_id_a": "flow-product",
+        "flow_type_a": "product_flow",
+        "segment_index_a": 3,
+        "flow_id_b": "flow-personnel",
+        "flow_type_b": "personnel_flow",
+        "segment_index_b": 2,
+        "related_object_ids": [
+          "door-main",
+          "door-production",
+          "room-finished-storage",
+          "room-packaging",
+          "room-production"
+        ]
+      }
+    ],
+    "advisory_only": true
+  }
+}

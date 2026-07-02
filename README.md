@@ -1,37 +1,68 @@
+# Explainable Regulatory Health Informatics for Thai FDA Food Manufacturing Floor-Plan Pre-Screening
 
-# Thai FDA Floorplan AI
+This repository contains a Phase 1 research prototype for GMP-oriented food manufacturing floor-plan pre-screening. It is designed as an advisory decision-support tool that helps Thai FDA officers review synthetic floor-plan annotations for spatial layout risks such as unsafe adjacency, crossing flows, insufficient sanitation access, toilet proximity to production areas, waste flow crossing product flow, and possible contamination pathways.
 
-Explainable regulatory health informatics prototype for Thai FDA food manufacturing facility floor-plan pre-screening.
+The prototype does not approve, reject, score, or rank applications. Human Thai FDA officers remain responsible for all regulatory decisions.
 
-## Purpose
+## Scope
 
-This project develops a human-in-the-loop decision-support system for GMP-based food manufacturing floor-plan review. It is intended to help regulatory officers identify possible spatial risks such as poor zoning, unsafe adjacency, crossing flow, insufficient sanitation access, and contamination pathways.
+- Synthetic annotation schema for simplified food manufacturing floor plans.
+- Spatial feature extraction for rooms, objects, and flow paths.
+- Explainable GMP-oriented rule engine.
+- Transparent risk report output in JSON.
+- Heatmap generation for officer review.
+- Streamlit demonstration app.
+- Pytest coverage for core components.
 
-The system is advisory only. It does not approve or reject applications.
+## Data Governance
 
-## Core modules
+Only synthetic data is included. Do not commit real Thai FDA records, applicant names, addresses, license numbers, signatures, official logos, confidential business data, or non-public facility layouts.
 
-1. Preprocessing
-2. Annotation schema
-3. Spatial feature extraction
-4. GMP rule engine
-5. Risk heatmap generation
-6. Evaluation against expert labels
-7. Officer-facing prototype app
+## Install
 
-## Development phases
+```bash
+pip install -e .
+```
 
-### Phase 1
-Rule-based prototype with manual or semi-automatic annotation.
+## Run CLI Demo
 
-### Phase 2
-Computer vision-assisted extraction of rooms, doors, windows, sinks, toilets, storage zones, production zones, and flow paths.
+```bash
+python scripts/run_screening.py \
+  --annotation data/sample_synthetic/annotation_simple_factory.json \
+  --rules configs/rules_gmp_thai_fda.yaml \
+  --output outputs/demo_report.json \
+  --heatmap outputs/demo_heatmap.png
+```
 
-### Phase 3
-Predictive model for revision-risk scoring using historical Thai FDA outcomes.
+## Run Streamlit App
 
-## Data governance
+```bash
+pip install -e ".[app]"
+streamlit run src/floorplan_ai/app/streamlit_app.py
+```
 
-Do not commit raw floor plans, applicant names, addresses, license numbers, or confidential business data.
-Use only synthetic examples in this repository.
-EOF
+## Expected Demo Findings
+
+The synthetic sample intentionally includes:
+
+- Toilet too close to a production area.
+- Waste flow crossing product flow.
+- Raw material storage too close to finished product storage.
+
+Additional advisory review flags may be generated depending on rule thresholds.
+
+## Repository Structure
+
+```text
+thai-fda-floorplan-ai/
+  configs/
+  data/sample_synthetic/
+  docs/
+  scripts/
+  src/floorplan_ai/
+  tests/
+```
+
+## Limitations
+
+This Phase 1 prototype uses simplified geometric annotations and deterministic rules. It does not parse engineering drawings, infer room labels from images, evaluate all Thai FDA or GMP requirements, or replace officer judgment. Future phases may add human-reviewed datasets, computer vision assistance, uncertainty calibration, Thai-language reporting, and integration testing with controlled non-production workflows.
