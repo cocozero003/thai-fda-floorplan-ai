@@ -12,6 +12,7 @@ dependencies = [
   "pydantic>=2.6,<3",
   "PyYAML>=6.0",
   "Pillow>=10.0",
+  "scikit-learn>=1.4",
 ]
 
 [project.optional-dependencies]

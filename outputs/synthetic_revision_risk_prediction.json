@@ -1,0 +1,56 @@
+{
+  "advisory_only": true,
+  "human_review_required": true,
+  "synthetic_data_only": true,
+  "warning": "Synthetic-data prototype only. No real Thai FDA records were used, and no real-world validation or operational performance is claimed.",
+  "revision_risk_class": "high",
+  "class_probabilities": {
+    "high": 0.9916666666666667,
+    "low": 0.008333333333333333,
+    "medium": 0.0
+  },
+  "top_feature_contributors": [
+    {
+      "feature": "finding_count",
+      "value": 6.0,
+      "model_importance": 0.3215847973785124,
+      "contribution_score": 1.9295087842710745
+    },
+    {
+      "feature": "flow_intersection_count",
+      "value": 7.0,
+      "model_importance": 0.11893399157133731,
+      "contribution_score": 0.8325379409993612
+    },
+    {
+      "feature": "object_count",
+      "value": 9.0,
+      "model_importance": 0.08743518659787713,
+      "contribution_score": 0.7869166793808942
+    },
+    {
+      "feature": "high_severity_count",
+      "value": 3.0,
+      "model_importance": 0.18849600157117335,
+      "contribution_score": 0.56548800471352
+    },
+    {
+      "feature": "room_count",
+      "value": 7.0,
+      "model_importance": 0.06679011804035466,
+      "contribution_score": 0.4675308262824826
+    }
+  ],
+  "features": {
+    "finding_count": 6.0,
+    "high_severity_count": 3.0,
+    "review_severity_count": 1.0,
+    "room_count": 7.0,
+    "object_count": 9.0,
+    "flow_intersection_count": 7.0,
+    "has_toilet_near_production": 0.0,
+    "has_waste_flow_intersection": 0.0,
+    "unknown_room_count": 1.0,
+    "handwashing_point_count": 1.0
+  }
+}

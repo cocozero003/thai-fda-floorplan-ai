@@ -1,0 +1,24 @@
+{
+  "synthetic_data_only": true,
+  "warning": "Synthetic-data prototype only. No real Thai FDA records were used, and no real-world validation or operational performance is claimed.",
+  "training_rows": 160,
+  "holdout_rows": 40,
+  "holdout_accuracy_on_synthetic_data": 0.925,
+  "feature_names": [
+    "finding_count",
+    "high_severity_count",
+    "review_severity_count",
+    "room_count",
+    "object_count",
+    "flow_intersection_count",
+    "has_toilet_near_production",
+    "has_waste_flow_intersection",
+    "unknown_room_count",
+    "handwashing_point_count"
+  ],
+  "classes": [
+    "high",
+    "low",
+    "medium"
+  ]
+}

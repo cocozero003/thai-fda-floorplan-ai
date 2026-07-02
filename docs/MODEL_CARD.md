@@ -2,7 +2,11 @@
 
 ## System Type
 
-This Phase 1 prototype is not a trained predictive model. It is an explainable rule-based screening system using synthetic floor-plan annotations and configurable GMP-oriented rules.
+This repository contains an explainable rule-based screening system plus synthetic Phase 3, Phase 4, and Phase 5 demonstration components. The Phase 4 classifier is trained only on generated synthetic rows.
+
+## Phase 2 Deferred
+
+Phase 2 is deferred. This repository currently uses synthetic data only. Real Thai FDA de-identified data and expert annotation are required before validation or operational use.
 
 ## Intended Use
 
@@ -17,12 +21,18 @@ The system must not be used to approve, reject, rank, or automatically decide ap
 - Synthetic annotation JSON.
 - Optional floor-plan image for heatmap background.
 - Rule YAML configuration.
+- Synthetic training CSV for the Phase 4 model.
+- Officer comments and override notes for the Phase 5 simulation.
 
 ## Outputs
 
 - Advisory JSON report.
 - Risk findings with explanations and recommended human review actions.
 - Heatmap PNG.
+- Synthetic CV detected annotation JSON.
+- Synthetic revision-risk class probabilities and feature contributors.
+- Officer-facing Markdown and JSON reports.
+- Audit log.
 
 ## Limitations
 
@@ -31,6 +41,8 @@ The system must not be used to approve, reject, rank, or automatically decide ap
 - Does not parse CAD or PDF drawings.
 - Does not cover all GMP or Thai FDA requirements.
 - Does not replace site inspection, document review, or officer judgment.
+- Does not claim real-world model performance or validation.
+- Does not use real Thai FDA records.
 
 ## Human Oversight
 

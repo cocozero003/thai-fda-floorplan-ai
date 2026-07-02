@@ -1,0 +1,698 @@
+{
+  "annotation_id": "synthetic-cv-demo-detected",
+  "version": "1.0",
+  "image_width": 800,
+  "image_height": 600,
+  "advisory_only": true,
+  "rooms": [
+    {
+      "room_id": "cv-room-corridor-1",
+      "room_type": "corridor",
+      "polygon": {
+        "points": [
+          {
+            "x": 61.0,
+            "y": 481.0
+          },
+          {
+            "x": 720.0,
+            "y": 481.0
+          },
+          {
+            "x": 720.0,
+            "y": 540.0
+          },
+          {
+            "x": 61.0,
+            "y": 540.0
+          }
+        ]
+      },
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.98,
+        "synthetic_data_only": true
+      }
+    },
+    {
+      "room_id": "cv-room-finished_product_storage-1",
+      "room_type": "finished_product_storage",
+      "polygon": {
+        "points": [
+          {
+            "x": 81.0,
+            "y": 321.0
+          },
+          {
+            "x": 240.0,
+            "y": 321.0
+          },
+          {
+            "x": 240.0,
+            "y": 460.0
+          },
+          {
+            "x": 81.0,
+            "y": 460.0
+          }
+        ]
+      },
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.98,
+        "synthetic_data_only": true
+      }
+    },
+    {
+      "room_id": "cv-room-packaging_area-1",
+      "room_type": "packaging_area",
+      "polygon": {
+        "points": [
+          {
+            "x": 541.0,
+            "y": 171.0
+          },
+          {
+            "x": 628.0,
+            "y": 171.0
+          },
+          {
+            "x": 628.0,
+            "y": 270.0
+          },
+          {
+            "x": 541.0,
+            "y": 270.0
+          }
+        ]
+      },
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.98,
+        "synthetic_data_only": true
+      }
+    },
+    {
+      "room_id": "cv-room-packaging_area-2",
+      "room_type": "packaging_area",
+      "polygon": {
+        "points": [
+          {
+            "x": 541.0,
+            "y": 239.0
+          },
+          {
+            "x": 619.0,
+            "y": 239.0
+          },
+          {
+            "x": 619.0,
+            "y": 300.0
+          },
+          {
+            "x": 541.0,
+            "y": 300.0
+          }
+        ]
+      },
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.98,
+        "synthetic_data_only": true
+      }
+    },
+    {
+      "room_id": "cv-room-packaging_area-3",
+      "room_type": "packaging_area",
+      "polygon": {
+        "points": [
+          {
+            "x": 541.0,
+            "y": 244.0
+          },
+          {
+            "x": 605.0,
+            "y": 244.0
+          },
+          {
+            "x": 605.0,
+            "y": 291.0
+          },
+          {
+            "x": 541.0,
+            "y": 291.0
+          }
+        ]
+      },
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.98,
+        "synthetic_data_only": true
+      }
+    },
+    {
+      "room_id": "cv-room-packaging_area-4",
+      "room_type": "packaging_area",
+      "polygon": {
+        "points": [
+          {
+            "x": 622.0,
+            "y": 171.0
+          },
+          {
+            "x": 700.0,
+            "y": 171.0
+          },
+          {
+            "x": 700.0,
+            "y": 300.0
+          },
+          {
+            "x": 622.0,
+            "y": 300.0
+          }
+        ]
+      },
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.98,
+        "synthetic_data_only": true
+      }
+    },
+    {
+      "room_id": "cv-room-production_area-1",
+      "room_type": "production_area",
+      "polygon": {
+        "points": [
+          {
+            "x": 261.0,
+            "y": 171.0
+          },
+          {
+            "x": 520.0,
+            "y": 171.0
+          },
+          {
+            "x": 520.0,
+            "y": 291.0
+          },
+          {
+            "x": 261.0,
+            "y": 291.0
+          }
+        ]
+      },
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.98,
+        "synthetic_data_only": true
+      }
+    },
+    {
+      "room_id": "cv-room-production_area-2",
+      "room_type": "production_area",
+      "polygon": {
+        "points": [
+          {
+            "x": 261.0,
+            "y": 240.0
+          },
+          {
+            "x": 394.0,
+            "y": 240.0
+          },
+          {
+            "x": 394.0,
+            "y": 389.0
+          },
+          {
+            "x": 261.0,
+            "y": 389.0
+          }
+        ]
+      },
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.98,
+        "synthetic_data_only": true
+      }
+    },
+    {
+      "room_id": "cv-room-production_area-3",
+      "room_type": "production_area",
+      "polygon": {
+        "points": [
+          {
+            "x": 397.0,
+            "y": 282.0
+          },
+          {
+            "x": 520.0,
+            "y": 282.0
+          },
+          {
+            "x": 520.0,
+            "y": 389.0
+          },
+          {
+            "x": 397.0,
+            "y": 389.0
+          }
+        ]
+      },
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.98,
+        "synthetic_data_only": true
+      }
+    },
+    {
+      "room_id": "cv-room-production_area-4",
+      "room_type": "production_area",
+      "polygon": {
+        "points": [
+          {
+            "x": 473.0,
+            "y": 312.0
+          },
+          {
+            "x": 520.0,
+            "y": 312.0
+          },
+          {
+            "x": 520.0,
+            "y": 372.0
+          },
+          {
+            "x": 473.0,
+            "y": 372.0
+          }
+        ]
+      },
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.98,
+        "synthetic_data_only": true
+      }
+    },
+    {
+      "room_id": "cv-room-raw_material_storage-1",
+      "room_type": "raw_material_storage",
+      "polygon": {
+        "points": [
+          {
+            "x": 81.0,
+            "y": 171.0
+          },
+          {
+            "x": 240.0,
+            "y": 171.0
+          },
+          {
+            "x": 240.0,
+            "y": 300.0
+          },
+          {
+            "x": 81.0,
+            "y": 300.0
+          }
+        ]
+      },
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.98,
+        "synthetic_data_only": true
+      }
+    },
+    {
+      "room_id": "cv-room-toilet-1",
+      "room_type": "toilet",
+      "polygon": {
+        "points": [
+          {
+            "x": 261.0,
+            "y": 71.0
+          },
+          {
+            "x": 360.0,
+            "y": 71.0
+          },
+          {
+            "x": 360.0,
+            "y": 150.0
+          },
+          {
+            "x": 261.0,
+            "y": 150.0
+          }
+        ]
+      },
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.98,
+        "synthetic_data_only": true
+      }
+    },
+    {
+      "room_id": "cv-room-unknown-1",
+      "room_type": "unknown",
+      "polygon": {
+        "points": [
+          {
+            "x": 371.0,
+            "y": 71.0
+          },
+          {
+            "x": 510.0,
+            "y": 71.0
+          },
+          {
+            "x": 510.0,
+            "y": 150.0
+          },
+          {
+            "x": 371.0,
+            "y": 150.0
+          }
+        ]
+      },
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.98,
+        "synthetic_data_only": true
+      }
+    },
+    {
+      "room_id": "cv-room-unlabeled_room-1",
+      "room_type": "unlabeled_room",
+      "polygon": {
+        "points": [
+          {
+            "x": 371.0,
+            "y": 71.0
+          },
+          {
+            "x": 510.0,
+            "y": 71.0
+          },
+          {
+            "x": 510.0,
+            "y": 150.0
+          },
+          {
+            "x": 371.0,
+            "y": 150.0
+          }
+        ]
+      },
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.98,
+        "synthetic_data_only": true
+      }
+    },
+    {
+      "room_id": "cv-room-washing_area-1",
+      "room_type": "washing_area",
+      "polygon": {
+        "points": [
+          {
+            "x": 541.0,
+            "y": 321.0
+          },
+          {
+            "x": 619.0,
+            "y": 321.0
+          },
+          {
+            "x": 619.0,
+            "y": 389.0
+          },
+          {
+            "x": 541.0,
+            "y": 389.0
+          }
+        ]
+      },
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.98,
+        "synthetic_data_only": true
+      }
+    },
+    {
+      "room_id": "cv-room-washing_area-2",
+      "room_type": "washing_area",
+      "polygon": {
+        "points": [
+          {
+            "x": 541.0,
+            "y": 321.0
+          },
+          {
+            "x": 700.0,
+            "y": 321.0
+          },
+          {
+            "x": 700.0,
+            "y": 460.0
+          },
+          {
+            "x": 541.0,
+            "y": 460.0
+          }
+        ]
+      },
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.98,
+        "synthetic_data_only": true
+      }
+    },
+    {
+      "room_id": "cv-room-waste_area-1",
+      "room_type": "waste_area",
+      "polygon": {
+        "points": [
+          {
+            "x": 561.0,
+            "y": 51.0
+          },
+          {
+            "x": 700.0,
+            "y": 51.0
+          },
+          {
+            "x": 700.0,
+            "y": 140.0
+          },
+          {
+            "x": 561.0,
+            "y": 140.0
+          }
+        ]
+      },
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.98,
+        "synthetic_data_only": true
+      }
+    }
+  ],
+  "objects": [
+    {
+      "object_id": "cv-object-door-1",
+      "object_type": "door",
+      "bbox": {
+        "x_min": 101.0,
+        "y_min": 481.0,
+        "x_max": 140.0,
+        "y_max": 500.0
+      },
+      "polygon": null,
+      "room_id": "cv-room-corridor-1",
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.96,
+        "synthetic_data_only": true
+      }
+    },
+    {
+      "object_id": "cv-object-door-2",
+      "object_type": "door",
+      "bbox": {
+        "x_min": 371.0,
+        "y_min": 392.0,
+        "x_max": 394.0,
+        "y_max": 410.0
+      },
+      "polygon": null,
+      "room_id": null,
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.96,
+        "synthetic_data_only": true
+      }
+    },
+    {
+      "object_id": "cv-object-door-3",
+      "object_type": "door",
+      "bbox": {
+        "x_min": 397.0,
+        "y_min": 392.0,
+        "x_max": 420.0,
+        "y_max": 410.0
+      },
+      "polygon": null,
+      "room_id": null,
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.96,
+        "synthetic_data_only": true
+      }
+    },
+    {
+      "object_id": "cv-object-drain-1",
+      "object_type": "drain",
+      "bbox": {
+        "x_min": 651.0,
+        "y_min": 421.0,
+        "x_max": 670.0,
+        "y_max": 440.0
+      },
+      "polygon": null,
+      "room_id": "cv-room-washing_area-2",
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.96,
+        "synthetic_data_only": true
+      }
+    },
+    {
+      "object_id": "cv-object-equipment-1",
+      "object_type": "equipment",
+      "bbox": {
+        "x_min": 331.0,
+        "y_min": 241.0,
+        "x_max": 430.0,
+        "y_max": 300.0
+      },
+      "polygon": null,
+      "room_id": "cv-room-production_area-1",
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.96,
+        "synthetic_data_only": true
+      }
+    },
+    {
+      "object_id": "cv-object-equipment-2",
+      "object_type": "equipment",
+      "bbox": {
+        "x_min": 377.0,
+        "y_min": 297.0,
+        "x_max": 394.0,
+        "y_max": 300.0
+      },
+      "polygon": null,
+      "room_id": "cv-room-production_area-2",
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.96,
+        "synthetic_data_only": true
+      }
+    },
+    {
+      "object_id": "cv-object-equipment-3",
+      "object_type": "equipment",
+      "bbox": {
+        "x_min": 397.0,
+        "y_min": 293.0,
+        "x_max": 430.0,
+        "y_max": 300.0
+      },
+      "polygon": null,
+      "room_id": "cv-room-production_area-3",
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.96,
+        "synthetic_data_only": true
+      }
+    },
+    {
+      "object_id": "cv-object-handwashing_point-1",
+      "object_type": "handwashing_point",
+      "bbox": {
+        "x_min": 451.0,
+        "y_min": 431.0,
+        "x_max": 480.0,
+        "y_max": 460.0
+      },
+      "polygon": null,
+      "room_id": null,
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.96,
+        "synthetic_data_only": true
+      }
+    },
+    {
+      "object_id": "cv-object-sink-1",
+      "object_type": "sink",
+      "bbox": {
+        "x_min": 586.0,
+        "y_min": 351.0,
+        "x_max": 619.0,
+        "y_max": 380.0
+      },
+      "polygon": null,
+      "room_id": "cv-room-washing_area-1",
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.96,
+        "synthetic_data_only": true
+      }
+    },
+    {
+      "object_id": "cv-object-sink-2",
+      "object_type": "sink",
+      "bbox": {
+        "x_min": 622.0,
+        "y_min": 351.0,
+        "x_max": 625.0,
+        "y_max": 380.0
+      },
+      "polygon": null,
+      "room_id": "cv-room-washing_area-2",
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.96,
+        "synthetic_data_only": true
+      }
+    },
+    {
+      "object_id": "cv-object-window-1",
+      "object_type": "window",
+      "bbox": {
+        "x_min": 501.0,
+        "y_min": 231.0,
+        "x_max": 530.0,
+        "y_max": 270.0
+      },
+      "polygon": null,
+      "room_id": "cv-room-production_area-1",
+      "metadata": {
+        "source": "synthetic_color_detector",
+        "confidence": 0.96,
+        "synthetic_data_only": true
+      }
+    }
+  ],
+  "flows": [],
+  "metadata": {
+    "data_classification": "synthetic",
+    "contains_real_thai_fda_data": false,
+    "phase": "Phase 3 synthetic computer vision prototype",
+    "warning": "Not trained on real Thai FDA data. Advisory demonstration only."
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "advisory_only": true,
+  "synthetic_data_only": true,
+  "human_review_required": true,
+  "entries": [
+    {
+      "timestamp": "2026-07-02T13:05:49.770241+00:00",
+      "actor": "system",
+      "action": "session_created",
+      "details": {
+        "case_id": "synthetic-workflow-case-001"
+      },
+      "advisory_only": true,
+      "synthetic_data_only": true
+    },
+    {
+      "timestamp": "2026-07-02T13:05:49.772357+00:00",
+      "actor": "synthetic_officer",
+      "action": "officer_input_recorded",
+      "details": {
+        "has_comment": true,
+        "has_override": true
+      },
+      "advisory_only": true,
+      "synthetic_data_only": true
+    },
+    {
+      "timestamp": "2026-07-02T13:05:49.772357+00:00",
+      "actor": "system",
+      "action": "rule_screening_started",
+      "details": {
+        "rules_path": "configs\\rules_gmp_thai_fda.yaml"
+      },
+      "advisory_only": true,
+      "synthetic_data_only": true
+    },
+    {
+      "timestamp": "2026-07-02T13:05:49.812991+00:00",
+      "actor": "system",
+      "action": "rule_screening_completed",
+      "details": {
+        "finding_count": 6
+      },
+      "advisory_only": true,
+      "synthetic_data_only": true
+    },
+    {
+      "timestamp": "2026-07-02T13:05:49.812991+00:00",
+      "actor": "system",
+      "action": "synthetic_ml_prediction_started",
+      "details": {
+        "model_path": "outputs\\synthetic_revision_risk_model.pkl"
+      },
+      "advisory_only": true,
+      "synthetic_data_only": true
+    },
+    {
+      "timestamp": "2026-07-02T13:05:49.842787+00:00",
+      "actor": "system",
+      "action": "synthetic_ml_prediction_completed",
+      "details": {
+        "revision_risk_class": "high"
+      },
+      "advisory_only": true,
+      "synthetic_data_only": true
+    }
+  ]
+}
